@@ -4,8 +4,8 @@ from Data.BERT_features.prep_data import *
 
 bert = AutoModel.from_pretrained('bert-base-uncased')
 
-for param in bert.parameters():
-    param.requires_grad = False
+# for param in bert.parameters():
+#     param.requires_grad = False
 
 # pass the pre-trained BERT to our define architecture
 model = BERT_Arch(bert)
