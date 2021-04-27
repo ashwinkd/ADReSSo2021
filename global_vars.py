@@ -7,9 +7,6 @@ import os
 
 import numpy as np
 
-import tensorflow_datasets as tfds
-tfds.disable_progress_bar()
-
 from transformers import AutoModel, BertTokenizerFast
 from sklearn.model_selection import train_test_split
 import torch
