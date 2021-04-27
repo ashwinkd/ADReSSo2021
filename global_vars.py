@@ -21,7 +21,7 @@ from transformers import AdamW
 from sklearn.utils.class_weight import compute_class_weight
 
 
-data_directory = "../../data.pickle"
+data_directory = "data.pickle"
 
 device = torch.device("cuda")
 

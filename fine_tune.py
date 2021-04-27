@@ -1,6 +1,5 @@
-from Data.BERT_features.Model.model import *
-from Data.BERT_features.global_vars import *
-from Data.BERT_features.prep_data import *
+from model import *
+from prep_data import *
 
 bert = AutoModel.from_pretrained('bert-base-uncased')
 

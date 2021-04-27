@@ -1,4 +1,4 @@
-from Data.BERT_features.global_vars import *
+from global_vars import *
 
 
 def encode_sentence(transcript, tokenizer):
@@ -44,7 +44,7 @@ def bert_encode(transcripts, tokenizer):
 
 
 ## Data
-data = pd.read_pickle(data_directory)
+data = pd.read_pickle('data.pickle')
 data = pd.get_dummies(data, columns=['dx'])
 
 X_transcript = data.transcript.to_numpy()

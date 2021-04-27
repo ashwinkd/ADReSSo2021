@@ -1,4 +1,4 @@
-from Data.BERT_features.global_vars import *
+from global_vars import *
 
 
 class BERT_Arch(nn.Module):
