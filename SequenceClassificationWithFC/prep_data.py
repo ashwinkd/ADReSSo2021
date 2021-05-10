@@ -44,7 +44,7 @@ def bert_encode(transcripts, tokenizer):
 
 
 ## Data
-data = pd.read_pickle('../data.pickle')
+data = pd.read_pickle('../BertForSequenceClassification/data.pickle')
 data = pd.get_dummies(data, columns=['dx'])
 
 X_transcript = data.transcript.to_numpy()
