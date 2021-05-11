@@ -1,6 +1,6 @@
 import time
 
-from _BertForSequenceClassification import *
+from model import *
 
 training_stats = []
 

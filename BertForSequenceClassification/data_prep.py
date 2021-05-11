@@ -7,7 +7,8 @@ import torch
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 from torch.utils.data import TensorDataset, random_split
-from transformers import BertTokenizerFast
+
+from model_choice import model_name
 
 #################### Global Variables ####################
 
@@ -40,9 +41,22 @@ train_text, temp_text, train_labels, temp_labels = train_test_split(df['transcri
                                                                     test_size=0.3,
                                                                     stratify=df['dx'])
 
+
 #################### BERT features ####################
 
-tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
+def get_bert_tokenizer():
+    from transformers import BertTokenizer
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    return tokenizer
+
+
+def get_roberta_tokenizer():
+    from transformers import RobertaTokenizer
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
+    return tokenizer
+
+
+tokenizer = locals()[f"get_{model_name.lower()}_tokenizer"]()
 
 
 def encode_sentence(transcript, tokenizer):
