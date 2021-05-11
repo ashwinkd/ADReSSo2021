@@ -7,6 +7,7 @@ in_directory = "/mnt/f/Research/ADReSSo/2020/train/transcription"
 out_directory = "train/transcription"
 speaker_dict = {}
 df = pd.DataFrame(columns=['speaker', 'transcript_without_tags', 'transcript_with_tags', 'dx'])
+all_lines = ""
 
 
 def resolve_repeats(text):
@@ -91,6 +92,7 @@ for cat in ["Control", "Dementia"]:
                     idx2 += 1
                 par_line_without_tags = remove_tags(par_line)
                 print(par_line_without_tags)
+                all_lines += par_line_without_tags + "\n"
                 df = df.append({'speaker': speaker,
                                 'transcript_without_tags': par_line_without_tags,
                                 'transcript_with_tags': par_line,
@@ -98,3 +100,6 @@ for cat in ["Control", "Dementia"]:
                                ignore_index=True)
             idx += 1
 df.to_pickle("transcripts.pickle")
+with open("all_text.txt", 'w') as fptr:
+    fptr.write(all_lines)
+    fptr.close()
