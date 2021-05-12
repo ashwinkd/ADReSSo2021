@@ -11,16 +11,29 @@ columns = ['speaker',
            'dx',
            'transcript_without_tags',
            'transcript_with_tags',
-           'long_pause_count',
-           'short_pause_count',
-           'repitition_count',
-           'retracing_count',
-           'illegible_count',
-           'error_count',
-           'phonological_error_count',
-           'utt_err']
+           'polysyllabic_word_count',
+           'word_repetition',
+           'phrase_repetition',
+           'word_retrace',
+           'phrase_retrace']
 df = pd.DataFrame(columns=columns)
 all_lines = ""
+
+classwise_error = {"Control": {'polysyllabic_word_count': 0,
+                               'word_repetition': 0,
+                               'phrase_repetition': 0,
+                               'word_retrace': 0,
+                               'phrase_retrace': 0},
+                   "Dementia": {'polysyllabic_word_count': 0,
+                                'word_repetition': 0,
+                                'phrase_repetition': 0,
+                                'word_retrace': 0,
+                                'phrase_retrace': 0}
+                   }
+
+classwise_utterances = {"Control": 0,
+                        "Dementia": 0
+                        }
 
 
 def resolve_repeats(text):
@@ -85,25 +98,34 @@ def get_id(text):
 
 
 def count_disfluencies(text):
-    long_pause_count = len(re.findall(r'\(\.\.\.\)', text))
-    short_pause_count = len(re.findall(r'\(\.\.\)', text))
-    repitition_count = len(re.findall(r'\[\/\]', text))
-    for m in re.findall(r"\[x\s\d+\]", text):
-        repitition_count += int(re.sub('[^0-9]', '', m))
-    retracing_count = len(re.findall(r'\[\/\/\]', text))
-    illegible_count = len(re.findall(r'xxx', text))
-    error_count = len(re.findall(r"\[\:", text))
-    phonological_error = len(re.findall(r"\@[abcdefgiklnopqstuwxz]", text))
-    phonological_error += len(re.findall(r"\&", text))
-    utt_err = len(re.findall(r"\[\+\s(gram|jar|es|per|cir)\]", text))
-    return long_pause_count, \
-           short_pause_count, \
-           repitition_count, \
-           retracing_count, \
-           illegible_count, \
-           error_count, \
-           phonological_error, \
-           utt_err
+    word_repetition = 0
+    phrase_repetition = 0
+    word_retrace = 0
+    phrase_retrace = 0
+    for m in re.finditer(r"\[\/\]", text):
+        start_rep, end_rep = m.start(0), m.end(0)
+        if text[start_rep - 2] == '>':
+            phrase_repetition += 1
+        else:
+            word_repetition += 1
+    for m in re.finditer(r"\[\/\/\]", text):
+        start_rep, end_rep = m.start(0), m.end(0)
+        if text[start_rep - 2] == '>':
+            phrase_retrace += 1
+        else:
+            word_retrace += 1
+    polysyllabic_word_count = len(re.findall(r"\[x\s\d+\]", text))
+    return [polysyllabic_word_count, word_repetition, phrase_repetition, word_retrace, phrase_retrace]
+
+
+def add_to_class(errors, cat):
+    classwise_utterances[cat] += 1
+    polysyllabic_word_count, word_repetition, phrase_repetition, word_retrace, phrase_retrace = errors
+    classwise_error[cat]['polysyllabic_word_count'] += polysyllabic_word_count
+    classwise_error[cat]['word_repetition'] += word_repetition
+    classwise_error[cat]['phrase_repetition'] += phrase_repetition
+    classwise_error[cat]['word_retrace'] += word_retrace
+    classwise_error[cat]['phrase_retrace'] += phrase_retrace
 
 
 for phase in ["train", "test"]:
@@ -139,32 +161,26 @@ for phase in ["train", "test"]:
                         idx2 += 1
                     par_line_without_tags = remove_tags(par_line)
                     utt_id = get_id(par_line)
-                    long_pause_count, \
-                    short_pause_count, \
-                    repitition_count, \
-                    retracing_count, \
-                    illegible_count, \
-                    error_count, \
-                    phonological_error, \
-                    utt_err = count_disfluencies(par_line)
+                    errors = count_disfluencies(par_line)
+                    if phase == "train":
+                        add_to_class(errors, cat)
                     print(par_line_without_tags)
                     all_lines += par_line_without_tags + "\n"
                     row = dict(zip(columns, [speaker,
                                              utt_id,
                                              cat if phase == "train" else None,
                                              par_line_without_tags,
-                                             par_line,
-                                             long_pause_count,
-                                             short_pause_count,
-                                             repitition_count,
-                                             retracing_count,
-                                             illegible_count,
-                                             error_count,
-                                             phonological_error,
-                                             utt_err]))
+                                             par_line
+                                             ] + errors))
                     df = df.append(row, ignore_index=True)
                 idx += 1
-df.to_pickle("transcripts.pickle")
+df.to_pickle('transcripts.pickle')
+print(classwise_error)
+for cat, error_dict in classwise_error.items():
+    utt_count = classwise_utterances[cat]
+    for error, num in error_dict.items():
+        classwise_error[cat][error] = num / utt_count
+print(classwise_error)
 with open("all_text.txt", 'w') as fptr:
     fptr.write(all_lines)
     fptr.close()
