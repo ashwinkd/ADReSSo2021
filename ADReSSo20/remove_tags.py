@@ -3,10 +3,23 @@ import re
 
 import pandas as pd
 
-in_directory = "/mnt/f/Research/ADReSSo/2020/train/transcription"
+in_directory = "/mnt/f/Research/ADReSSo/2020/"
 out_directory = "train/transcription"
 speaker_dict = {}
-df = pd.DataFrame(columns=['speaker', 'transcript_without_tags', 'transcript_with_tags', 'dx'])
+columns = ['speaker',
+           'utt_id',
+           'dx',
+           'transcript_without_tags',
+           'transcript_with_tags',
+           'long_pause_count',
+           'short_pause_count',
+           'repitition_count',
+           'retracing_count',
+           'illegible_count',
+           'error_count',
+           'phonological_error_count',
+           'utt_err']
+df = pd.DataFrame(columns=columns)
 all_lines = ""
 
 
@@ -30,8 +43,10 @@ def resolve_repeats(text):
 
 def remove_tags(text):
     text = text.replace("*PAR:\t", '')
-    text = text.replace("...", '')
-    text = text.replace("..", '')
+    if text.endswith('...'):
+        text = text[-3:]
+    text = text.replace("(...)", '')
+    text = text.replace("(..)", '')
     text = text.replace('[//]', '')
     text = text.replace('[/]', '')
     text = text.replace('‡', '')
@@ -64,41 +79,91 @@ def remove_tags(text):
     return text
 
 
-for cat in ["Control", "Dementia"]:
-    for file in os.listdir(os.path.join(in_directory, cat)):
-        in_filepath = os.path.join(in_directory, cat, file)
-        speaker = file.split('.')[0]
-        out_filepath = os.path.join(out_directory, cat, f"{speaker}.txt")
-        ##############
-        if speaker not in speaker_dict:
-            speaker_dict[speaker] = []
-        lines = []
-        with open(in_filepath, 'r') as ifptr:
-            lines = ifptr.readlines()
-        idx = 0
-        while idx < len(lines):
-            line = lines[idx]
-            if line.startswith("*PAR"):
-                par_line = line
-                idx2 = idx + 1
-                while idx2 < len(lines):
-                    next_line = lines[idx2]
-                    if re.match(r"\d+\_\d+", next_line):
+def get_id(text):
+    for m in re.findall(r"\d+\_\d+", text):
+        return m
+
+
+def count_disfluencies(text):
+    long_pause_count = len(re.findall(r'\(\.\.\.\)', text))
+    short_pause_count = len(re.findall(r'\(\.\.\)', text))
+    repitition_count = len(re.findall(r'\[\/\]', text))
+    for m in re.findall(r"\[x\s\d+\]", text):
+        repitition_count += int(re.sub('[^0-9]', '', m))
+    retracing_count = len(re.findall(r'\[\/\/\]', text))
+    illegible_count = len(re.findall(r'xxx', text))
+    error_count = len(re.findall(r"\[\:", text))
+    phonological_error = len(re.findall(r"\@[abcdefgiklnopqstuwxz]", text))
+    phonological_error += len(re.findall(r"\&", text))
+    utt_err = len(re.findall(r"\[\+\s(gram|jar|es|per|cir)\]", text))
+    return long_pause_count, \
+           short_pause_count, \
+           repitition_count, \
+           retracing_count, \
+           illegible_count, \
+           error_count, \
+           phonological_error, \
+           utt_err
+
+
+for phase in ["train", "test"]:
+    for cat in ["Control", "Dementia"]:
+        if phase == "train":
+            filepath = os.path.join(in_directory, phase, 'transcription', cat)
+        else:
+            filepath = os.path.join(in_directory, phase, 'transcription')
+        for file in os.listdir(filepath):
+            in_filepath = os.path.join(filepath, file)
+            speaker = file.split('.')[0]
+
+            ##############
+            if speaker not in speaker_dict:
+                speaker_dict[speaker] = []
+            lines = []
+            with open(in_filepath, 'r') as ifptr:
+                lines = ifptr.readlines()
+            idx = 0
+            while idx < len(lines):
+                line = lines[idx]
+                if line.startswith("*PAR"):
+                    par_line = line
+                    idx2 = idx + 1
+                    while idx2 < len(lines):
+                        next_line = lines[idx2]
+                        if re.match(r"\d+\_\d+", next_line):
+                            par_line += " " + next_line
+                            break
+                        if ":\t" in next_line:
+                            break
                         par_line += " " + next_line
-                        break
-                    if ":\t" in next_line:
-                        break
-                    par_line += " " + next_line
-                    idx2 += 1
-                par_line_without_tags = remove_tags(par_line)
-                print(par_line_without_tags)
-                all_lines += par_line_without_tags + "\n"
-                df = df.append({'speaker': speaker,
-                                'transcript_without_tags': par_line_without_tags,
-                                'transcript_with_tags': par_line,
-                                "dx": cat},
-                               ignore_index=True)
-            idx += 1
+                        idx2 += 1
+                    par_line_without_tags = remove_tags(par_line)
+                    utt_id = get_id(par_line)
+                    long_pause_count, \
+                    short_pause_count, \
+                    repitition_count, \
+                    retracing_count, \
+                    illegible_count, \
+                    error_count, \
+                    phonological_error, \
+                    utt_err = count_disfluencies(par_line)
+                    print(par_line_without_tags)
+                    all_lines += par_line_without_tags + "\n"
+                    row = dict(zip(columns, [speaker,
+                                             utt_id,
+                                             cat if phase == "train" else None,
+                                             par_line_without_tags,
+                                             par_line,
+                                             long_pause_count,
+                                             short_pause_count,
+                                             repitition_count,
+                                             retracing_count,
+                                             illegible_count,
+                                             error_count,
+                                             phonological_error,
+                                             utt_err]))
+                    df = df.append(row, ignore_index=True)
+                idx += 1
 df.to_pickle("transcripts.pickle")
 with open("all_text.txt", 'w') as fptr:
     fptr.write(all_lines)
