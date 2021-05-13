@@ -165,7 +165,7 @@ for phase in ["train", "test"]:
                     if phase == "train":
                         add_to_class(errors, cat)
                     print(par_line_without_tags)
-                    all_lines += par_line_without_tags + "\n"
+                    all_lines += f"{par_line_without_tags}\n"
                     row = dict(zip(columns, [speaker,
                                              utt_id,
                                              cat if phase == "train" else None,
@@ -181,6 +181,7 @@ for cat, error_dict in classwise_error.items():
     for error, num in error_dict.items():
         classwise_error[cat][error] = num / utt_count
 print(classwise_error)
+print(classwise_utterances)
 with open("all_text.txt", 'w') as fptr:
     fptr.write(all_lines)
     fptr.close()
