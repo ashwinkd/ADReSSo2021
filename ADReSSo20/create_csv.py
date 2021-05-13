@@ -17,7 +17,7 @@ def get_key(text):
 dys_and_parse['key'] = dys_and_parse.disfluency.apply(lambda x: get_key(x))
 dys_and_parse = dys_and_parse.set_index('key').T.to_dict('list')
 
-data = pd.read_pickle('transcripts.pickle')
+data = pd.read_pickle('transcript_with_disfluency_parse.pickle')
 
 
 def get_disfluency(utterance):
@@ -43,22 +43,11 @@ def get_parse(utterance):
 data["disfluency_text"] = data.transcript_without_tags.apply(lambda x: get_disfluency(x))
 data["parse_tree"] = data.transcript_without_tags.apply(lambda x: get_parse(x))
 
-
-def get_phase(x):
-    if x in ["Control", "Dementia"]:
-        return "TRAIN"
-    else:
-        return "TEST"
-
-
-data['test_or_train'] = data.dx.apply(lambda x: get_phase(x))
-
-data_test = data[data['test_or_train'] == "TEST"]
-data_train = data[data['test_or_train'] == "TRAIN"]
 data[['speaker',
       'utt_id',
       'dx',
       'transcript_without_tags',
       'transcript_with_tags',
       'disfluency_text',
-      'parse_tree']].to_pickle('transcript_with_disfluency_parse.pickle')
+      'parse_tree',
+      'recall']].to_pickle('transcript_with_disfluency_parse.pickle')
