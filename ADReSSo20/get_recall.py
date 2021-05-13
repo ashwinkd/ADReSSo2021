@@ -62,7 +62,7 @@ def get_all_errors(target):
     repeat_errors = []
     retrace_errors = []
     polysyllabic_errors = []
-    for match in re.finditer(r"(\[\/\]|\[\/\/\]|\[x)", target):
+    for match in re.finditer(r"(\[\/\]|\[\/\/\])", target):
         start = match.start()
         end = match.end()
         error_type = target[start: end]
@@ -95,6 +95,7 @@ def get_all_errors(target):
             error_e = space_m.start()
             break
         error_text = before_text[error_s + 1:error_e + 1][::-1]
+        error_text = normalize(error_text)
         for num in re.findall(r"\d+", target[end:]):
             polysyllabic_errors += [error_text for _ in range(int(num))]
             break
