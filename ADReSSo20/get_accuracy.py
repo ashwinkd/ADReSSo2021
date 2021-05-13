@@ -191,7 +191,10 @@ def get_detected_errors(pred):
             else:
                 error_text += " " + w
         error_text = normalize(error_text)
-        detected_phrase_errors.append(error_text)
+        if end - start > 1:
+            detected_phrase_errors.append(error_text)
+        else:
+            detected_word_errors.append(error_text)
     detected_errors = make_unique(detected_phrase_errors.copy(),
                                   detected_word_errors.copy(),
                                   detected_phrase_errors.copy(),
