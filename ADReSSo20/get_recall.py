@@ -85,8 +85,19 @@ def get_all_errors(target):
                 repeat_errors.append(error_text)
             elif error_type == '[//]':
                 retrace_errors.append(error_text)
-            elif error_type == '[x':
-                polysyllabic_errors.append(error_text)
+    for match in re.finditer(r"\[x", target):
+        start = match.start()
+        end = match.end()
+        before_text = target[:start][::-1]
+        error_s = before_text.index(" ")
+        error_e = 0
+        for space_m in re.finditer(r"\s", before_text[error_s + 1:]):
+            error_e = space_m.start()
+            break
+        error_text = before_text[error_s + 1:error_e + 1][::-1]
+        for num in re.findall(r"\d+", target[end:]):
+            polysyllabic_errors += [error_text for _ in range(int(num))]
+            break
     all_errors = make_unique(repeat_errors + retrace_errors + polysyllabic_errors)
     return all_errors
 
