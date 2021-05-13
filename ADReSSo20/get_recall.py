@@ -48,7 +48,7 @@ def make_unique(err_list):
 
 def get_recall(all_errors, detected_errors):
     if all_errors is None or not all_errors:
-        return 1
+        return -1
     if detected_errors is None:
         return 0
     found_errors = set(detected_errors).intersection(set(all_errors))
@@ -145,14 +145,14 @@ dys_and_parse_train = dys_and_parse[dys_and_parse['test_or_train'] == "TRAIN"]
 dys_and_parse_train.to_pickle('transcript_with_disfluency_parse_train.pickle')
 dys_and_parse_test.to_pickle('transcript_with_disfluency_parse_test.pickle')
 
-recalls = dys_and_parse['recall'].tolist()
+recalls = [r for r in dys_and_parse['recall'].tolist() if r != -1]
 avg_recall = sum(recalls) / len(recalls)
 print("Overall:", avg_recall)
 
-recalls = dys_and_parse_train['recall'].tolist()
+recalls = [r for r in dys_and_parse_train['recall'].tolist() if r != -1]
 avg_recall = sum(recalls) / len(recalls)
 print("Train: ", avg_recall)
 
-recalls = dys_and_parse_test['recall'].tolist()
+recalls = [r for r in dys_and_parse_test['recall'].tolist() if r != -1]
 avg_recall = sum(recalls) / len(recalls)
 print("Test:", avg_recall)
