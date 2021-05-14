@@ -290,9 +290,9 @@ dys_and_parse['test_or_train'] = dys_and_parse.dx.apply(lambda x: get_phase(x))
 
 dys_and_parse_test = dys_and_parse[dys_and_parse['test_or_train'] == "TEST"]
 dys_and_parse_train = dys_and_parse[dys_and_parse['test_or_train'] == "TRAIN"]
-# dys_and_parse.to_pickle('transcript_with_disfluency_parse.pickle')
-# dys_and_parse_train.to_pickle('transcript_with_disfluency_parse_train.pickle')
-# dys_and_parse_test.to_pickle('transcript_with_disfluency_parse_test.pickle')
+dys_and_parse.to_pickle('transcript_with_disfluency_parse.pickle')
+dys_and_parse_train.to_pickle('transcript_with_disfluency_parse_train.pickle')
+dys_and_parse_test.to_pickle('transcript_with_disfluency_parse_test.pickle')
 
 avg_accuracy = [r for r in dys_and_parse['acc_WREP'].tolist() if r != -1]
 avg_acc = sum(avg_accuracy) / len(avg_accuracy)
