@@ -28,7 +28,7 @@ for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
     else:
         speaker_transcript = data_a[speaker][1]
         if transcript is not None:
-            speaker_transcript += " " + transcript
+            speaker_transcript += ". " + transcript
         data_a[speaker] = (speaker, speaker_transcript, dx, mmse)
 
 data_a = pd.DataFrame(list(data_a.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
@@ -46,7 +46,15 @@ def update(new, old):
 def remove_repetition(pred, alignment, all_errors):
     if all_errors is None or not all_errors:
         if pred is not None:
-            return " ".join(pred[::2])
+            pred = pred.split()
+            pred = pred[::2]
+            transcript = ""
+            for w in pred:
+                if w.startswith("'") or w.startswith("n'"):
+                    transcript += w
+                else:
+                    transcript += " " + w
+            return transcript.strip()
         else:
             return None
     if pred is None or not pred:
@@ -116,7 +124,7 @@ def remove_repetition(pred, alignment, all_errors):
             transcript += w
         else:
             transcript += " " + w
-    return transcript
+    return transcript.strip()
 
 
 data['transcript_without_repetition'] = data.apply(lambda x: remove_repetition(x.disfluency_text,
@@ -132,7 +140,7 @@ for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
     else:
         speaker_transcript = data_b[speaker][1]
         if transcript is not None:
-            speaker_transcript += " " + transcript
+            speaker_transcript += ". " + transcript
         data_b[speaker] = (speaker, speaker_transcript, dx, mmse)
 
 data_b = pd.DataFrame(list(data_b.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
@@ -141,7 +149,15 @@ data_b = pd.DataFrame(list(data_b.values()), columns=['speaker', 'transcript', '
 def remove_retracing(pred, alignment, all_errors):
     if all_errors is None or not all_errors:
         if pred is not None:
-            return " ".join(pred[::2])
+            pred = pred.split()
+            pred = pred[::2]
+            transcript = ""
+            for w in pred:
+                if w.startswith("'") or w.startswith("n'"):
+                    transcript += w
+                else:
+                    transcript += " " + w
+            return transcript.strip()
         else:
             return None
     if pred is None or not pred:
@@ -211,7 +227,7 @@ def remove_retracing(pred, alignment, all_errors):
             transcript += w
         else:
             transcript += " " + w
-    return transcript
+    return transcript.strip()
 
 
 data['transcript_without_retracing'] = data.apply(lambda x: remove_retracing(x.disfluency_text,
@@ -227,7 +243,7 @@ for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
     else:
         speaker_transcript = data_c[speaker][1]
         if transcript is not None:
-            speaker_transcript += " " + transcript
+            speaker_transcript += ". " + transcript
         data_c[speaker] = (speaker, speaker_transcript, dx, mmse)
 
 data_c = pd.DataFrame(list(data_c.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
@@ -235,3 +251,4 @@ data_c = pd.DataFrame(list(data_c.values()), columns=['speaker', 'transcript', '
 data_a.to_pickle("data_a.pickle")
 data_b.to_pickle("data_b.pickle")
 data_c.to_pickle("data_c.pickle")
+print()
