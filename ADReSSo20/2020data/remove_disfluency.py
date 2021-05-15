@@ -248,7 +248,8 @@ for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
 
 data_c = pd.DataFrame(list(data_c.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
 
-data_a.to_pickle("data_a.pickle")
+data_a.to_pickle("data_a"
+                 ".pickle")
 data_b.to_pickle("data_b.pickle")
 data_c.to_pickle("data_c.pickle")
 print()
