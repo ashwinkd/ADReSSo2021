@@ -174,7 +174,7 @@ for phase in ["train", "test"]:
                                              ] + errors))
                     df = df.append(row, ignore_index=True)
                 idx += 1
-df.to_pickle('transcripts.pickle')
+# df.to_pickle('transcripts.pickle')
 print(classwise_error)
 for cat, error_dict in classwise_error.items():
     utt_count = classwise_utterances[cat]
@@ -182,6 +182,6 @@ for cat, error_dict in classwise_error.items():
         classwise_error[cat][error] = num / utt_count
 print(classwise_error)
 print(classwise_utterances)
-with open("all_text.txt", 'w') as fptr:
-    fptr.write(all_lines)
-    fptr.close()
+# with open("all_text.txt", 'w') as fptr:
+#     fptr.write(all_lines)
+#     fptr.close()

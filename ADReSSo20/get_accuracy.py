@@ -196,7 +196,7 @@ def get_acc(target, pred):
 def get_accuracy(pred, alignment, all_errors):
     if all_errors is None or not all_errors:
         return [-1, -1, -1, -1]
-    if pred is None or not all_errors:
+    if pred is None or not pred:
         return [0, 0, 0, 0]
     pred = pred.split()
     detected_wrep_errors = {}
