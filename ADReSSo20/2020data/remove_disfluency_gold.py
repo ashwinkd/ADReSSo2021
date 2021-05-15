@@ -17,9 +17,6 @@ def clean_text(text):
     return text
 
 
-data['transcript_without_tags'] = data.transcript_without_tags.apply(lambda x: clean_text(x))
-
-
 def resolve_repeats(text):
     text_tokens = text.split()
     idx = 0
@@ -68,7 +65,8 @@ def remove_tags(text):
     if text.startswith('.'):
         text = text[1:]
     text = re.sub(r"[=:][a-z]+", "", text)
-    text = re.sub(r"\[x[0-9 ]+\]", "", text)
+    if re.findall(r"\[x[0-9 ]+\]", text):
+        text = resolve_repeats(text)
     text = text.replace('[]', '')
     text = text.replace('_', ' ')
     text = re.sub(r'\s+', ' ', text).strip()
@@ -77,6 +75,10 @@ def remove_tags(text):
     text = " ".join(text_tokens)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
+
+
+data['transcript_without_tags'] = data.transcript_with_tags.apply(lambda x: remove_tags(x))
+data['transcript_without_tags'] = data.transcript_without_tags.apply(lambda x: clean_text(x))
 
 
 def remove_repetition(transcript):
@@ -107,6 +109,7 @@ def remove_repetition(transcript):
             transcript_tokens[wi] = '[TO BE REMOVED]'
     transcript_tokens = [w for w in transcript_tokens if w != "[TO BE REMOVED]"]
     transcript_without_repetition = " ".join(transcript_tokens)
+    transcript_without_repetition = re.sub(r"\[x[0-9 ]+\]", "", transcript_without_repetition)
     transcript_without_repetition = remove_tags(transcript_without_repetition)
     return transcript_without_repetition
 
