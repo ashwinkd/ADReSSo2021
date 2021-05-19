@@ -4,11 +4,10 @@ import re
 import numpy as np
 import pandas as pd
 import torch
+from model_choice import model_name
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 from torch.utils.data import TensorDataset, random_split
-
-from model_choice import model_name
 
 #################### Global Variables ####################
 
@@ -46,7 +45,7 @@ train_text, temp_text, train_labels, temp_labels = train_test_split(df['transcri
 
 def get_bert_tokenizer():
     from transformers import BertTokenizer
-    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_basic_tokenize=False)
     return tokenizer
 
 
@@ -59,20 +58,14 @@ def get_roberta_tokenizer():
 tokenizer = locals()[f"get_{model_name.lower()}_tokenizer"]()
 
 
-def encode_sentence(transcript, tokenizer):
-    tokens = []
-    continous_speech = re.split(r'\[P\d\]', transcript)
-    if not continous_speech:
-        transcript = str.encode(transcript, 'utf-8')
-        tokens = list(tokenizer.tokenize(transcript))
+def encode_sentence(transcript, tokenizer, include_pauses=True):
+    if include_pauses:
+        transcript = re.sub(r"\[P1\]", "[unused0]", transcript)
+        transcript = re.sub(r"\[P2\]", "[unused1]", transcript)
+        transcript = re.sub(r"\[P3\]", "[unused2]", transcript)
     else:
-        for idx, speech in enumerate(continous_speech):
-            tokens += list(tokenizer.tokenize(speech))
-            if idx + 1 < len(continous_speech):
-                surrounding_speech = r'{}\[P\d\]{}'.format(continous_speech[idx], continous_speech[idx + 1])
-                surrounding_speech = re.findall(surrounding_speech, transcript)[0]
-                pause_num = int(re.sub('[^0-9]', '', surrounding_speech))
-                tokens.append(UNUSED_TOKEN[pause_num])
+        transcript = re.sub(r"\[P\d\]", "", transcript)
+    tokens = list(tokenizer.tokenize(transcript))
     tokens = ['[CLS]'] + tokens + ['[SEP]']
     token_ids = tokenizer.convert_tokens_to_ids(tokens)
     return token_ids
@@ -95,8 +88,8 @@ def add_padding(input_word_ids):
     return {'input_ids': input_word_ids, 'attention_mask': input_type}
 
 
-def bert_encode(transcripts, tokenizer):
-    input_word_ids = [encode_sentence(s, tokenizer)
+def bert_encode(transcripts, tokenizer, include_pauses=True):
+    input_word_ids = [encode_sentence(s, tokenizer, include_pauses)
                       for s in transcripts]
     input_word_ids = add_padding(input_word_ids)
     return input_word_ids
@@ -104,6 +97,9 @@ def bert_encode(transcripts, tokenizer):
 
 tokens_train = bert_encode(train_text.to_list(), tokenizer)
 tokens_test = bert_encode(temp_text.to_list(), tokenizer)
+
+_tokens_train = bert_encode(train_text.to_list(), tokenizer, False)
+_tokens_test = bert_encode(temp_text.to_list(), tokenizer, False)
 
 #################### Torch Dataset ####################
 
@@ -131,3 +127,5 @@ validation_dataloader = DataLoader(
     sampler=SequentialSampler(val_dataset),  # Pull out batches sequentially.
     batch_size=batch_size  # Evaluate with this batch size.
 )
+
+encode_sentence("the water is running", tokenizer)

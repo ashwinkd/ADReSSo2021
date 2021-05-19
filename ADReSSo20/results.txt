@@ -1,0 +1,100 @@
+############################## data2020gold_utt.pickle
+#################### all_text
+*****RESULTS*****
+SVR: 
+Total Acc:  0.794392523364486
+Total F1:  0.7843137254901961
+Total Confusion Matrix: 
+ [[45  8]
+ [14 40]]
+Random Forest: 
+Total Acc:  0.5794392523364486
+Total F1:  0.6715328467153285
+Total Confusion Matrix: 
+ [[16 37]
+ [ 8 46]]
+#################### wo repetition
+*****RESULTS*****
+SVR: 
+Total Acc:  0.794392523364486
+Total F1:  0.7884615384615384
+Total Confusion Matrix: 
+ [[44  9]
+ [13 41]]
+Random Forest: 
+Total Acc:  0.5981308411214953
+Total F1:  0.6950354609929078
+Total Confusion Matrix: 
+ [[15 38]
+ [ 5 49]]
+#################### wo retracing
+*****RESULTS*****
+SVR: 
+Total Acc:  0.794392523364486
+Total F1:  0.78
+Total Confusion Matrix: 
+ [[46  7]
+ [15 39]]
+Random Forest: 
+Total Acc:  0.5327102803738317
+Total F1:  0.6428571428571428
+Total Confusion Matrix: 
+ [[12 41]
+ [ 9 45]]
+#################### wo either
+ *****RESULTS*****
+SVR: 
+Total Acc:  0.7850467289719626
+Total F1:  0.7676767676767676
+Total Confusion Matrix: 
+ [[46  7]
+ [16 38]]
+Random Forest: 
+Total Acc:  0.5514018691588785
+Total F1:  0.6571428571428571
+Total Confusion Matrix: 
+ [[13 40]
+ [ 8 46]]
+############################## data2020fisher_utt.pickle
+#################### all_text
+*****RESULTS*****
+SVR: 
+Total Acc:  0.7850467289719626
+Total F1:  0.7628865979381443
+Total Confusion Matrix: 
+ [[47  6]
+ [17 37]]
+Random Forest: 
+Total Acc:  0.6448598130841121
+Total F1:  0.6984126984126984
+Total Confusion Matrix: 
+ [[25 28]
+ [10 44]]
+#################### wo repetition
+*****RESULTS*****
+SVR: 
+Total Acc:  0.7757009345794392
+Total F1:  0.75
+Total Confusion Matrix: 
+ [[47  6]
+ [18 36]]
+Random Forest: 
+Total Acc:  0.6074766355140186
+Total F1:  0.6718749999999999
+Total Confusion Matrix: 
+ [[22 31]
+ [11 43]]
+#################### wo retracing
+*****RESULTS*****
+SVR: 
+Total Acc:  0.7850467289719626
+Total F1:  0.7676767676767676
+Total Confusion Matrix: 
+ [[46  7]
+ [16 38]]
+Random Forest: 
+Total Acc:  0.6074766355140186
+Total F1:  0.6769230769230768
+Total Confusion Matrix: 
+ [[21 32]
+ [10 44]]

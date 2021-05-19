@@ -2,7 +2,7 @@ import re
 
 import pandas as pd
 
-dys_and_parse = pd.read_pickle('all_tags.pkl')
+dys_and_parse = pd.read_pickle('all_tags_new.pkl')
 idx = 0
 keys = set()
 
@@ -31,7 +31,7 @@ def normalize(text):
 dys_and_parse['utterance'] = dys_and_parse.disfluency.apply(lambda x: get_key(x))
 dys_and_parse = dys_and_parse.set_index('utterance').T.to_dict('list')
 
-data = pd.read_pickle('transcript_with_disfluency_parse.pickle')
+data = pd.read_pickle('transcripts.pickle')
 
 
 def get_disfluency(utterance):
@@ -64,8 +64,7 @@ data[['speaker',
       'transcript_without_tags',
       'transcript_with_tags',
       'disfluency_text',
-      'parse_tree',
-      'recall']].to_pickle('transcript_with_disfluency_parse.pickle')
+      'parse_tree']].to_csv('transcript_with_disfluency_parse.csv')
 print("#" * 20)
 for k in keys:
     dys_and_parse.pop(k)

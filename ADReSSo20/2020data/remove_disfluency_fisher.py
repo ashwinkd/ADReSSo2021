@@ -1,4 +1,5 @@
 import re
+from itertools import groupby
 
 import pandas as pd
 
@@ -10,6 +11,21 @@ data = pd.read_pickle('../transcript_with_disfluency_parse_train.pickle')
 data['mmse'] = data.speaker.apply(lambda x: id_to_mmse.get(x, None))
 
 
+# classwise_Etags = {"Control": 0, "Dementia": 0}
+# classwise_percentage = {"Control": 0, "Dementia": 0}
+# classwise_count = {"Control": 0, "Dementia": 0}
+# for (idx, (disfluency_text, dx)) in data[['disfluency_text', 'dx']].iterrows():
+#     if disfluency_text is None:
+#         continue
+#     tokens = disfluency_text.split()
+#     tags = tokens[1::2]
+#     e_tokens = [t for t in tags if t == "E"]
+#     classwise_Etags[dx] += len(e_tokens)
+#     classwise_percentage[dx] += len(e_tokens) / len(tags)
+#     classwise_count[dx] += 1
+# print(classwise_Etags)
+# print("Control AVG%: ", classwise_percentage["Control"]/classwise_count["Control"])
+# print("Dementia AVG%: ", classwise_percentage["Dementia"]/classwise_count["Dementia"])
 def clean_text(text):
     text = text.lower()
     text = re.sub(r"[^a-z' ]", " ", text)
@@ -17,21 +33,85 @@ def clean_text(text):
     return text
 
 
-data['transcript_without_tags'] = data.transcript_without_tags.apply(lambda x: clean_text(x))
-data_a = {}
-for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
-                                                    'transcript_without_tags',
-                                                    'dx',
-                                                    'mmse']].iterrows():
-    if speaker not in data_a:
-        data_a[speaker] = (speaker, transcript, dx, mmse)
-    else:
-        speaker_transcript = data_a[speaker][1]
-        if transcript is not None:
-            speaker_transcript += ". " + transcript
-        data_a[speaker] = (speaker, speaker_transcript, dx, mmse)
+def resolve_repeats(text):
+    text_tokens = text.split()
+    idx = 0
+    while idx < len(text_tokens):
+        token = text_tokens[idx]
+        if token != "[x":
+            idx += 1
+            continue
+        repeat_count = int(re.sub(r"[^0-9]", "", text_tokens[idx + 1])) - 1
+        repeats = [text_tokens[idx - 1]] * repeat_count
+        if idx + 2 < len(text_tokens):
+            text_tokens = text_tokens[:idx] + repeats + text_tokens[idx + 2:]
+        else:
+            text_tokens = text_tokens[:idx] + repeats
+        idx += 1
+    return " ".join(text_tokens)
 
-data_a = pd.DataFrame(list(data_a.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
+
+def remove_tags(text):
+    text = text.replace("*PAR:\t", '')
+    if text.endswith('...'):
+        text = text[-3:]
+    text = text.replace("*PAR:", '')
+    text = text.replace("(...)", '')
+    text = text.replace("...", '')
+    text = text.replace("(..)", '')
+    text = text.replace("(.)", '')
+    text = text.replace('[//]', '')
+    text = text.replace('[/]', '')
+    text = text.replace('‡', '')
+    text = text.replace('xxx', '')
+    text = text.replace('[=! sings]', '')
+    text = re.sub(r"[&()<>]", '', text)
+    matches = re.findall(r'\[[\:\*][a-zA-Z\:\_\'\-\@\s]+\]', text)
+    for match in matches:
+        text = text.replace(match, '')
+    if re.findall(r"\d+\_\d+", text):
+        text = re.split(r'[\s/+"][.?!][\s[]', text)[0]
+    text = re.sub(r"\d+\_\d+]", "", text)
+    text = re.sub(r"\+", "", text)
+    text = re.sub(r"\"", "", text)
+    if text.startswith('.'):
+        text = text[1:]
+    text = re.sub(r"[=:][a-z]+", "", text)
+    if re.findall(r"\[x[0-9 ]+\]", text):
+        text = resolve_repeats(text)
+    text = text.replace('[]', '')
+    text = text.replace('_', ' ')
+    text = re.sub(r'\s+', ' ', text).strip()
+    text_tokens = text.split()
+    text_tokens = [t if "@" not in t else "" for t in text_tokens]
+    text = " ".join(text_tokens)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+# data['transcript_without_tags'] = data.transcript_with_tags.apply(lambda x: remove_tags(x))
+# data['transcript_without_tags'] = data.transcript_without_tags.apply(lambda x: clean_text(x))
+def get_words(text):
+    if text is None:
+        return
+    tokens = text.split()
+    twords = tokens[::2]
+    transcript = " ".join(twords)
+    return transcript
+
+
+data['transcript_without_tags'] = data.disfluency_text.apply(lambda x: get_words(x))
+
+
+def remove_underscore(text):
+    if text is None:
+        return
+    text = re.sub(r"\_", "F", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+data['transcript_without_underscore'] = data.disfluency_text.apply(lambda x: remove_underscore(x))
 
 
 def update(new, old):
@@ -47,14 +127,9 @@ def remove_repetition(pred, alignment, all_errors):
     if all_errors is None or not all_errors:
         if pred is not None:
             pred = pred.split()
-            pred = pred[::2]
+            transcript = " ".join([w for w in pred[::2]])
             transcript = ""
-            for w in pred:
-                if w.startswith("'") or w.startswith("n'"):
-                    transcript += w
-                else:
-                    transcript += " " + w
-            return transcript.strip()
+            return transcript
         else:
             return None
     if pred is None or not pred:
@@ -116,48 +191,22 @@ def remove_repetition(pred, alignment, all_errors):
         words_to_remove = detected_prep_idx[key]
         for wi in words_to_remove:
             pred_words[wi] = "[TO BE REMOVED]"
-    transcript = ""
-    for w in pred_words:
-        if w == "[TO BE REMOVED]":
-            continue
-        if w.startswith("'") or w.startswith("n'"):
-            transcript += w
-        else:
-            transcript += " " + w
-    return transcript.strip()
+    transcript = " ".join([w for w in pred_words if w != '[TO BE REMOVED]'])
+    return transcript
 
 
 data['transcript_without_repetition'] = data.apply(lambda x: remove_repetition(x.disfluency_text,
                                                                                x.alignments,
                                                                                x.all_errors), axis=1)
-data_b = {}
-for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
-                                                    'transcript_without_repetition',
-                                                    'dx',
-                                                    'mmse']].iterrows():
-    if speaker not in data_b:
-        data_b[speaker] = (speaker, transcript, dx, mmse)
-    else:
-        speaker_transcript = data_b[speaker][1]
-        if transcript is not None:
-            speaker_transcript += ". " + transcript
-        data_b[speaker] = (speaker, speaker_transcript, dx, mmse)
-
-data_b = pd.DataFrame(list(data_b.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
 
 
 def remove_retracing(pred, alignment, all_errors):
     if all_errors is None or not all_errors:
         if pred is not None:
             pred = pred.split()
-            pred = pred[::2]
+            transcript = " ".join([w for w in pred[::2]])
             transcript = ""
-            for w in pred:
-                if w.startswith("'") or w.startswith("n'"):
-                    transcript += w
-                else:
-                    transcript += " " + w
-            return transcript.strip()
+            return transcript
         else:
             return None
     if pred is None or not pred:
@@ -219,37 +268,174 @@ def remove_retracing(pred, alignment, all_errors):
         words_to_remove = detected_pret_idx[key]
         for wi in words_to_remove:
             pred_words[wi] = "[TO BE REMOVED]"
-    transcript = ""
-    for w in pred_words:
-        if w == "[TO BE REMOVED]":
-            continue
-        if w.startswith("'") or w.startswith("n'"):
-            transcript += w
-        else:
-            transcript += " " + w
-    return transcript.strip()
+    transcript = " ".join([w for w in pred_words if w != '[TO BE REMOVED]'])
+    return transcript
 
 
 data['transcript_without_retracing'] = data.apply(lambda x: remove_retracing(x.disfluency_text,
                                                                              x.alignments,
                                                                              x.all_errors), axis=1)
-data_c = {}
-for (idx, (speaker, transcript, dx, mmse)) in data[['speaker',
-                                                    'transcript_without_retracing',
-                                                    'dx',
-                                                    'mmse']].iterrows():
-    if speaker not in data_c:
-        data_c[speaker] = (speaker, transcript, dx, mmse)
+
+
+def remove_duplicates(text):
+    text = [i[0] for i in groupby(text.split())]
+    text = " ".join(text)
+    return text
+
+
+def remove_disfluency(text):
+    if text is None:
+        return
+    text = text.split()
+    text_tags = text[1::2]
+    text_words = text[::2]
+    text = ""
+    for w, t in zip(text_words, text_tags):
+        if t == "E":
+            continue
+        text += " " + w
+    return text
+
+
+# def remove_uh(text):
+#     if text is None:
+#         return
+#     text = re.sub(r"\b[uhmo]{2,}\b", "", text)
+#     text = re.sub(r"\s+", " ", text).strip()
+#     text = remove_duplicates(text)
+#     text = re.sub(r"\s+", " ", text).strip()
+#     return text
+
+
+data['transcript_without_disfluency'] = data.disfluency_text.apply(lambda x: remove_disfluency(x))
+# data['transcript_without_uh'] = data.transcript_without_disfluency.apply(lambda x: remove_uh(x))
+
+data_final = {}
+for (idx, (speaker,
+           transcript_without_tags,
+           transcript_without_disfluency,
+           transcript_without_underscore,
+           transcript_without_repetition,
+           transcript_without_retracing,
+           dx,
+           mmse)) in data[['speaker',
+                           'transcript_without_tags',
+                           'transcript_without_disfluency',
+                           'transcript_without_underscore',
+                           'transcript_without_repetition',
+                           'transcript_without_retracing',
+                           'dx',
+                           'mmse']].iterrows():
+    if speaker not in data_final:
+        data_final[speaker] = (speaker,
+                               transcript_without_tags,
+                               transcript_without_disfluency,
+                               transcript_without_underscore,
+                               transcript_without_repetition,
+                               transcript_without_retracing,
+                               dx,
+                               mmse)
     else:
-        speaker_transcript = data_c[speaker][1]
-        if transcript is not None:
-            speaker_transcript += ". " + transcript
-        data_c[speaker] = (speaker, speaker_transcript, dx, mmse)
+        _transcript_without_tags = data_final[speaker][1]
+        _transcript_without_disfluency = data_final[speaker][2]
+        _transcript_without_underscore = data_final[speaker][3]
+        _transcript_without_repetition = data_final[speaker][4]
+        _transcript_without_retracing = data_final[speaker][5]
+        if transcript_without_tags is not None:
+            _transcript_without_tags += " " + transcript_without_tags
+        if transcript_without_disfluency is not None:
+            _transcript_without_disfluency += " " + transcript_without_disfluency
+        if transcript_without_underscore is not None:
+            _transcript_without_underscore += " " + transcript_without_underscore
+        if transcript_without_repetition is not None:
+            _transcript_without_repetition += " " + transcript_without_repetition
+        if transcript_without_retracing is not None:
+            _transcript_without_retracing += " " + transcript_without_retracing
+        data_final[speaker] = (speaker,
+                               _transcript_without_tags,
+                               _transcript_without_disfluency,
+                               _transcript_without_underscore,
+                               _transcript_without_repetition,
+                               _transcript_without_retracing,
+                               dx,
+                               mmse)
 
-data_c = pd.DataFrame(list(data_c.values()), columns=['speaker', 'transcript', 'dx', 'mmse'])
-
-data_a.to_pickle("data_a"
-                 ".pickle")
-data_b.to_pickle("data_b.pickle")
-data_c.to_pickle("data_c.pickle")
+data_final = pd.DataFrame(list(data_final.values()), columns=['speaker',
+                                                              'transcript_without_tags',
+                                                              'transcript_without_disfluency',
+                                                              'transcript_without_underscore',
+                                                              'transcript_without_repetition',
+                                                              'transcript_without_retracing',
+                                                              'dx',
+                                                              'mmse'])
+data_final.to_pickle('data2020fisher_all.pickle')
+data_final.to_csv('data2020fisher_all.csv')
+data[['speaker',
+      'transcript_without_tags',
+      'transcript_without_disfluency',
+      'transcript_without_underscore',
+      'transcript_without_repetition',
+      'transcript_without_retracing',
+      'dx',
+      'mmse']].to_pickle("data2020fisher_utt_all.pickle")
 print()
+
+#
+# def count_words(text):
+#     if text is None:
+#         return
+#     text = text.split()
+#     return len(text)
+#
+#
+# data_final['total_words'] = data_final.transcript_without_tags.apply(lambda x: count_words(x))
+# data_final['num_words_rep'] = data_final.transcript_without_repetition.apply(lambda x: count_words(x))
+# data_final['num_words_ret'] = data_final.transcript_without_retracing.apply(lambda x: count_words(x))
+# data_final['num_words_both'] = data_final.transcript_without_disfluency.apply(lambda x: count_words(x))
+#
+#
+# def get_percentage(num_words, total_words):
+#     if total_words is None:
+#         return -1
+#     if num_words is None:
+#         num_words = 0
+#     return (total_words - num_words) / total_words
+#
+#
+# data_final['rep_del'] = data_final.apply(lambda x: get_percentage(x.num_words_rep, x.total_words), axis=1)
+# data_final['ret_del'] = data_final.apply(lambda x: get_percentage(x.num_words_ret, x.total_words), axis=1)
+# data_final['both_del'] = data_final.apply(lambda x: get_percentage(x.num_words_both, x.total_words), axis=1)
+# # data_final.to_pickle('data2020fisher_all.pickle')
+# # data[['speaker',
+# #       'transcript_without_tags',
+# #       'transcript_without_disfluency',
+# #       'dx',
+# #       'mmse']].to_pickle("data2020fisher_utt_all.pickle")
+# # print()
+# # total_words = sum(data.total_words.tolist())
+# # num_words_rep = sum(data.num_words_rep.tolist())
+# # num_words_ret = sum(data.num_words_ret.tolist())
+# # num_words_both = sum(data.num_words_both.tolist())
+# #
+# # print("Rep: ", (total_words - num_words_rep) / total_words)
+# # print("Ret: ", (total_words - num_words_ret) / total_words)
+# # print("Both: ", (total_words - num_words_both) / total_words)
+# import numpy as np
+#
+# rep_del = [val for val in data_final.rep_del.tolist() if val != -1]
+# ret_del = [val for val in data_final.ret_del.tolist() if val != -1]
+# both_del = [val for val in data_final.both_del.tolist() if val != -1]
+# avg_rep_del = np.mean(rep_del)
+# avg_ret_del = np.mean(ret_del)
+# avg_both_del = np.mean(both_del)
+#
+# print("Rep: ", avg_rep_del)
+# print("Ret: ", avg_ret_del)
+# print("Both: ", avg_both_del)
+# for (idx, (text1, text2, text3, text4, text5)) in data[['transcript_without_tags',
+#                                                         'transcript_without_disfluency',
+#                                                         'transcript_without_uh',
+#                                                         'transcript_without_repetition',
+#                                                         'transcript_without_retracing']].iterrows():
+#     if text2 != text3:
+#         print(f'"{text2}"', "\n", f'"{text3}"', "\n\n")

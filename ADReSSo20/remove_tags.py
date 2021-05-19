@@ -58,8 +58,11 @@ def remove_tags(text):
     text = text.replace("*PAR:\t", '')
     if text.endswith('...'):
         text = text[-3:]
+    text = text.replace("*PAR:", '')
     text = text.replace("(...)", '')
+    text = text.replace("...", '')
     text = text.replace("(..)", '')
+    text = text.replace("(.)", '')
     text = text.replace('[//]', '')
     text = text.replace('[/]', '')
     text = text.replace('‡', '')
@@ -71,12 +74,9 @@ def remove_tags(text):
         text = text.replace(match, '')
     if re.findall(r"\d+\_\d+", text):
         text = re.split(r'[\s/+"][.?!][\s[]', text)[0]
-    if '+' in text:
-        if text.startswith('+'):
-            text = text.replace('+"', '')
-            text = text.replace('+', '')
-        else:
-            text = text.split('+')[0]
+    text = re.sub(r"\d+\_\d+]", "", text)
+    text = re.sub(r"\+", "", text)
+    text = re.sub(r"\"", "", text)
     if text.startswith('.'):
         text = text[1:]
     text = re.sub(r"[=:][a-z]+", "", text)
@@ -95,6 +95,13 @@ def remove_tags(text):
 def get_id(text):
     for m in re.findall(r"\d+\_\d+", text):
         return m
+
+
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r"[^a-z' ]", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def count_disfluencies(text):
@@ -160,6 +167,7 @@ for phase in ["train", "test"]:
                         par_line += " " + next_line
                         idx2 += 1
                     par_line_without_tags = remove_tags(par_line)
+                    par_line_without_tags = clean_text(par_line_without_tags)
                     utt_id = get_id(par_line)
                     errors = count_disfluencies(par_line)
                     if phase == "train":
@@ -174,7 +182,7 @@ for phase in ["train", "test"]:
                                              ] + errors))
                     df = df.append(row, ignore_index=True)
                 idx += 1
-# df.to_pickle('transcripts.pickle')
+df.to_csv('transcripts.csv')
 print(classwise_error)
 for cat, error_dict in classwise_error.items():
     utt_count = classwise_utterances[cat]
@@ -182,6 +190,6 @@ for cat, error_dict in classwise_error.items():
         classwise_error[cat][error] = num / utt_count
 print(classwise_error)
 print(classwise_utterances)
-# with open("all_text.txt", 'w') as fptr:
-#     fptr.write(all_lines)
-#     fptr.close()
+with open("all_text.txt", 'w') as fptr:
+    fptr.write(all_lines)
+    fptr.close()
