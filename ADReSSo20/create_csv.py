@@ -64,7 +64,7 @@ data[['speaker',
       'transcript_without_tags',
       'transcript_with_tags',
       'disfluency_text',
-      'parse_tree']].to_csv('transcript_with_disfluency_parse.csv')
+      'parse_tree']].to_pickle('transcript_with_disfluency_parse.pickle')
 print("#" * 20)
 for k in keys:
     dys_and_parse.pop(k)

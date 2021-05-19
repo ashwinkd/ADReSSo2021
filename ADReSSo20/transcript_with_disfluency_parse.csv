@@ -74,8 +74,8 @@
  	girl who is shushing her mother with her finger and reaching for the
  	cookie at the same time . 6133_16452
 ",and E he E 's E getting E a E cookie E and _ he _ 's _ sharing _ a _ cookie _ with _ the _ little _ girl _ who _ is _ shushing _ her _ mother _ with _ her _ finger _ and _ reaching _ for _ the _ cookie _ at _ the _ same _ time _,(S (EDITED (S (UNK and) (NP (UNK he)) (VP (UNK 's) (VP (UNK getting) (NP (UNK a) (UNK cookie)))))) (UNK and) (NP (UNK he)) (VP (UNK 's) (VP (UNK sharing) (NP (UNK a) (UNK cookie)) (PP (UNK with) (NP (NP (UNK the) (UNK little) (UNK girl)) (SBAR (WHNP (UNK who)) (S (VP (UNK is) (VP (VP (UNK shushing) (NP (UNK her) (UNK mother)) (PP (UNK with) (NP (UNK her) (UNK finger)))) (UNK and) (VP (UNK reaching) (PP (UNK for) (NP (UNK the) (UNK cookie))) (PP (UNK at) (NP (UNK the) (UNK same) (UNK time)))))))))))))
-30,S003,16452_19000,Control,on the k,"*PAR:	on the &k +... [+ exc] 16452_19000
-",on _ the _ k _,(PP (UNK on) (NP (UNK the) (UNK k)))
+30,S003,16452_19000,Control,on the k exc,"*PAR:	on the &k +... [+ exc] 16452_19000
+",,
 31,S003,19000_20484,Control,what are what are the instructions,"*PAR:	<what are> [/] what are the instructions ? [+ exc] 19000_20484
 ",what E are E what _ are _ the _ instructions _,(SBARQ (EDITED (SBARQ (WHNP (UNK what)) (SQ (UNK are)))) (WHNP (UNK what)) (SQ (UNK are) (NP (UNK the) (UNK instructions))))
 32,S003,20484_22230,Control,just give as many details like,"*PAR:	just give as many details like +/? [+ exc] 20484_22230
@@ -644,9 +644,9 @@
 ",grass _,(NP (UNK grass))
 290,S025,42053_46083,Control,let's get back to the room again,"*PAR:	let's get back to the room again . [+ exc] 42053_46083
 ",let _ 's _ get _ back _ to _ the _ room _ again _,(S (VP (UNK let) (S (NP (UNK 's)) (VP (UNK get) (ADVP (UNK back)) (PP (UNK to) (NP (UNK the) (UNK room))) (ADVP (UNK again))))))
-291,S025,46083_51315,Control,there's a cup two cups and a plate sitting on the counter,"*PAR:	there's <a cup> [//] two cups and a plate sitting on the
+291,S025,46083_51315,Control,there's a cup two cups and a plate sitting on the countertop,"*PAR:	there's <a cup> [//] two cups and a plate sitting on the
  	counter+top . 46083_51315
-",there _ 's _ a _ cup _ two _ cups _ and _ a _ plate _ sitting _ on _ the _ counter _,(S (NP (UNK there)) (VP (UNK 's) (NP (NP (UNK a) (UNK cup)) (NP (UNK two) (UNK cups)) (UNK and) (NP (NP (UNK a) (UNK plate)) (VP (UNK sitting) (PP (UNK on) (NP (UNK the) (UNK counter))))))))
+",,
 292,S025,51315_58564,Control,cupboards,"*PAR:	cupboards . [+ gram] 51315_58564
 ",cupboards _,(NP (UNK cupboards))
 293,S025,58564_71962,Control,the lady has a apron on dress slippers,"*PAR:	the lady has a apron on, dress, slippers . 58564_71962
@@ -745,10 +745,10 @@
 334,S030,34517_40369,Control,two s uh two cups and a plate are on the um counter there,"*PAR:	two [/] &s &uh two cups and a plate are on the &um counter there .
  	34517_40369
 ",two E s E uh _ two _ cups _ and _ a _ plate _ are _ on _ the _ um _ counter _ there _,(S (EDITED (NP (UNK two) (UNK s))) (INTJ (UNK uh)) (NP (NP (UNK two) (UNK cups)) (UNK and) (NP (UNK a) (UNK plate))) (VP (UNK are) (PP (PP (UNK on) (NP (UNK the) (INTJ (UNK um)) (UNK counter))) (ADVP (UNK there)))))
-335,S030,40369_54250,Control,and sh and out the window there's a walk,"*PAR:	and [/] &sh and out the window there's a walk+way and [/] and [/]
+335,S030,40369_54250,Control,and sh and out the window there's a walkway and and win and you can see a window across from the uh walkway uh drapes,"*PAR:	and [/] &sh and out the window there's a walk+way and [/] and [/]
  	&win and you can see a window across (.) from the &uh walk+way &uh
  	drapes . 40369_54250
-",and E sh _ and _ out _ the _ window _ there _ 's _ a _ walk _,(S (EDITED (UNK and)) (INTJ (UNK sh)) (UNK and) (PP (UNK out) (NP (UNK the) (UNK window))) (NP (UNK there)) (VP (UNK 's) (NP (UNK a) (UNK walk))))
+",,
 336,S030,54250_55823,Control,what's happening you said huh,"*PAR:	what's happening you said, huh ? [+ exc] 54250_55823
 ",what _ 's _ happening _ you _ said _ huh _,(S (SBAR (WHNP (UNK what)) (S (VP (UNK 's) (VP (UNK happening))))) (NP (UNK you)) (VP (UNK said) (INTJ (UNK huh))))
 337,S030,56020_59327,Control,okay that's that's what's happening i guess,"*PAR:	okay that's [/] that's what's happening I guess . [+ exc] 56020_59327
@@ -876,9 +876,9 @@
 ",there _ 's _ a _ sink _ there _,(S (NP (UNK there)) (VP (UNK 's) (NP (UNK a) (UNK sink)) (ADVP (UNK there))))
 395,S036,27580_30287,Control,plate and a cup,"*PAR:	plate and a cup . [+ gram] 27580_30287
 ",plate _ and _ a _ cup _,(NP (NP (UNK plate)) (UNK and) (NP (UNK a) (UNK cup)))
-396,S036,30287_38193,Control,outside you can see outside there the the walk,"*PAR:	outside you can see outside there the [/] the walk+way and hedges,
+396,S036,30287_38193,Control,outside you can see outside there the the walkway and hedges a window tree,"*PAR:	outside you can see outside there the [/] the walk+way and hedges,
  	a window, tree . 30287_38193
-",outside _ you _ can _ see _ outside _ there _ the E the _ walk _,(S (ADVP (UNK outside)) (NP (UNK you)) (VP (UNK can) (VP (UNK see) (PP (UNK outside) (ADVP (UNK there))) (EDITED (NP (UNK the))) (NP (UNK the) (UNK walk)))))
+",,
 397,S036,38193_44139,Control,and uh outside the cup the cookie jar would hafta be in the cupboard,"*PAR:	and &uh <outside the> [//] &cup the cookie jar would hafta be in
  	the cupboard . 38193_44139
 ",and _ uh _ outside _ the _ cup _ the _ cookie _ jar _ would _ hafta _ be _ in _ the _ cupboard _,(S (UNK and) (INTJ (UNK uh)) (PP (UNK outside) (NP (UNK the) (UNK cup))) (NP (UNK the) (UNK cookie) (UNK jar)) (VP (UNK would) (ADVP (UNK hafta)) (VP (UNK be) (PP (UNK in) (NP (UNK the) (UNK cupboard))))))
@@ -1068,9 +1068,9 @@
 ",number _ one _ the _ boy _ is _ stealing _ some _ cookies _ and _ he _ 's _ falling _ over _ from _ the _ chair _ that _ 's _ not _ setting _ straight _,(S (NP (UNK number) (UNK one)) (S (NP (UNK the) (UNK boy)) (VP (UNK is) (VP (UNK stealing) (NP (UNK some) (UNK cookies))))) (UNK and) (S (NP (UNK he)) (VP (UNK 's) (VP (UNK falling) (UNK over) (PP (PP (UNK from) (NP (UNK the) (UNK chair))) (SBAR (WHNP (UNK that)) (S (VP (UNK 's) (UNK not) (VP (UNK setting) (ADVP (UNK straight)))))))))))
 481,S048,26056_27490,Control,and the sink is overflowing,"*PAR:	and the sink is overflowing . 26056_27490
 ",and _ the _ sink _ is _ overflowing _,(S (UNK and) (NP (UNK the) (UNK sink)) (VP (UNK is) (VP (UNK overflowing))))
-482,S048,27490_30623,Control,you wanna know everything that's wrong with the picture or eh,"*PAR:	you wanna know everything that's wrong with the picture or &eh +..?
+482,S048,27490_30623,Control,you wanna know everything that's wrong with the picture or eh exc,"*PAR:	you wanna know everything that's wrong with the picture or &eh +..?
  	[+ exc] 27490_30623
-",you _ wanna _ know _ everything _ that _ 's _ wrong _ with _ the _ picture _ or _ eh _,(S (NP (UNK you)) (VP (UNK wanna) (VP (UNK know) (NP (NP (NP (UNK everything)) (SBAR (WHNP (UNK that)) (S (VP (UNK 's) (ADJP (UNK wrong) (PP (UNK with) (NP (UNK the) (UNK picture)))))))) (UNK or) (INTJ (UNK eh))))))
+",,
 483,S048,31448_32312,Control,everything that's happening,"*PAR:	everything [<] that's happening . [+ exc] 31448_32312
 ",everything _ that _ 's _ happening _,(NP (NP (UNK everything)) (SBAR (WHNP (UNK that)) (S (VP (UNK 's) (VP (UNK happening))))))
 484,S048,32412_32892,Control,okay,"*PAR:	okay . [+ exc] 32412_32892
@@ -1555,14 +1555,14 @@
 ",and _ i _ said _ it E 's E it _ 's _ overflowing _,(S (UNK and) (NP (UNK i)) (VP (UNK said) (SBAR (S (EDITED (S (NP (UNK it)) (VP (UNK 's)))) (NP (UNK it)) (VP (UNK 's) (ADJP (UNK overflowing)))))))
 707,S073,47413_48656,Control,and she's standing in the water,"*PAR:	and she's standing in the water . 47413_48656
 ",and _ she _ 's _ standing _ in _ the _ water _,(S (UNK and) (NP (UNK she)) (VP (UNK 's) (VP (UNK standing) (PP (UNK in) (NP (UNK the) (UNK water))))))
-708,S073,48656_50505,Control,and that's,"*PAR:	and that's +... [+ exc] 48656_50505
-",and _ that _ 's _,(S (UNK and) (NP (UNK that)) (VP (UNK 's)))
+708,S073,48656_50505,Control,and that's exc,"*PAR:	and that's +... [+ exc] 48656_50505
+",,
 709,S073,50505_51659,Control,i guess,"*PAR:	I guess . [+ exc] 50505_51659
 ",i _ guess _,(S (NP (UNK i)) (VP (UNK guess)))
 710,S073,54248_57185,Control,look somebody laying in the lawn out there,"*PAR:	look ‡ somebody laying in the lawn out there . 54248_57185
 ",look _ somebody _ laying _ in _ the _ lawn _ out _ there _,(S (VP (UNK look) (NP (NP (UNK somebody)) (VP (UNK laying) (PP (UNK in) (NP (UNK the) (UNK lawn))) (PP (UNK out) (ADVP (UNK there)))))))
-711,S073,57185_58544,Control,but i can't uh,"*PAR:	but I can't &uh &=laughs +... [+ exc] 57185_58544
-",but _ i _ ca _ n't _ uh _,(S (UNK but) (NP (UNK i)) (VP (UNK ca) (UNK n't) (INTJ (UNK uh))))
+711,S073,57185_58544,Control,but i can't uh exc,"*PAR:	but I can't &uh &=laughs +... [+ exc] 57185_58544
+",,
 712,S076,3100_3603,Control,mhm,"*PAR:	mhm . [+ exc] 3100_3603
 ",mhm _,(INTJ (UNK mhm))
 713,S076,7460_11363,Control,mhm a lot of things are happening,"*PAR:	mhm a_lot_of things are happening . 7460_11363
@@ -1749,8 +1749,8 @@
 ",and _ maybe _ he _ has _ uh _ um _,(S (UNK and) (ADVP (UNK maybe)) (NP (UNK he)) (VP (UNK has) (INTJ (UNK uh)) (INTJ (UNK um))))
 790,S082,118000_119723,Dementia,man,"*PAR:	man ! [+ exc] 118000_119723
 ",man _,(INTJ (UNK man))
-791,S082,119723_123300,Dementia,this is it's so,"*PAR:	<this is> [//] it's so +... [+ exc] 119723_123300
-",this E is E it _ 's _ so _,(S (EDITED (S (NP (UNK this)) (VP (UNK is)))) (NP (UNK it)) (VP (UNK 's) (ADJP (UNK so))))
+791,S082,119723_123300,Dementia,this is it's so exc,"*PAR:	<this is> [//] it's so +... [+ exc] 119723_123300
+",,
 792,S082,123300_134750,Dementia,some of the sometimes i i see it very clear and and uh other times i i see uh r,"*PAR:	<some o(f) the> [//] sometimes I [/] I see it very clear and [/]
  	and &uh other times I [/] I see &uh &r +/. [+ exc] 123300_134750
 ",some E of E the E sometimes _ i E i _ see _ it _ very _ clear _ and E and _ uh _ other _ times _ i E i _ see _ uh _ r _,(S (EDITED (NP (NP (UNK some)) (PP (UNK of) (NP (UNK the))))) (ADVP (UNK sometimes)) (EDITED (NP (UNK i))) (NP (UNK i)) (VP (VP (UNK see) (S (NP (UNK it)) (ADJP (UNK very) (UNK clear)))) (EDITED (UNK and)) (UNK and) (INTJ (UNK uh)) (NP (UNK other) (UNK times)) (EDITED (NP (UNK i))) (NP (UNK i)) (VP (UNK see) (INTJ (UNK uh)) (NP (UNK r)))))
@@ -1860,9 +1860,9 @@
 833,S084,122550_126325,Dementia,uh i either he she pushed it over or he fell over with it,"*PAR:	&uh I [//] either he [: she] [* s:r-ret] [//] she pushed it over or
  	he fell over with it . 122550_126325
 ",uh _ i _ either _ he E she _ pushed _ it _ over _ or _ he _ fell _ over _ with _ it _,(S (INTJ (UNK uh)) (NP (UNK i)) (UNK either) (S (EDITED (NP (UNK he))) (NP (UNK she)) (VP (UNK pushed) (NP (UNK it)) (ADVP (UNK over)))) (UNK or) (S (NP (UNK he)) (VP (UNK fell) (PRT (UNK over)) (PP (UNK with) (NP (UNK it))))))
-834,S084,127401_134740,Dementia,you know it uh i i uh excuse me but you know i i was,"*PAR:	you_know it &uh I [/] I [//] &uh excuse me but you_know I [/] I was
+834,S084,127401_134740,Dementia,you know it uh i i uh excuse me but you know i i was exc,"*PAR:	you_know it &uh I [/] I [//] &uh excuse me but you_know I [/] I was
  	+... [+ exc] 127401_134740
-",you _ know _ it E uh _ i _ i _ uh _ excuse _ me _ but _ you _ know _ i E i _ was _,(S (PRN (S (NP (UNK you)) (VP (UNK know)))) (EDITED (EDITED (EDITED (NP (UNK it))) (INTJ (UNK uh)) (NP (UNK i))) (NP (UNK i))) (INTJ (UNK uh)) (PRN (S (VP (UNK excuse) (NP (UNK me))))) (UNK but) (PRN (S (NP (UNK you)) (VP (UNK know)))) (EDITED (NP (UNK i))) (NP (UNK i)) (VP (UNK was)))
+",,
 835,S086,2013_6302,Dementia,there's a little girl,"*PAR:	there's a little girl . 2013_6302
 ",there _ 's _ a _ little _ girl _,(S (NP (UNK there)) (VP (UNK 's) (NP (UNK a) (UNK little) (UNK girl))))
 836,S086,6302_11155,Dementia,and a little boy standing on top of a stool,"*PAR:	and a little boy standin(g) on top of a stool . 6302_11155
@@ -1949,8 +1949,8 @@
 ",oh _ i _ see _ a _ part _ of _ the _ whole _ kitchen _,(S (INTJ (UNK oh)) (NP (UNK i)) (VP (UNK see) (NP (NP (UNK a) (UNK part)) (PP (UNK of) (NP (UNK the) (UNK whole) (UNK kitchen))))))
 876,S090,18525_20716,Dementia,is that all the kitchen or isn't it,"*PAR:	is that all the kitchen or isn't it ? [+ exc] 18525_20716
 ",is _ that _ all _ the _ kitchen _ or _ is _ n't _ it _,(SQ (SQ (UNK is) (NP (UNK that)) (NP (UNK all) (UNK the) (UNK kitchen))) (UNK or) (SQ (UNK is) (UNK n't) (NP (UNK it))))
-877,S090,20716_29778,Dementia,s uh oh i can't read,"*PAR:	&s &uh (..) oh I can't read +... [+ exc] 20716_29778
-",s _ uh _ oh _ i _ ca _ n't _ read _,(S (UNK s) (INTJ (UNK uh)) (INTJ (UNK oh)) (NP (UNK i)) (VP (UNK ca) (UNK n't) (VP (UNK read))))
+877,S090,20716_29778,Dementia,s uh oh i can't read exc,"*PAR:	&s &uh (..) oh I can't read +... [+ exc] 20716_29778
+",,
 878,S090,29778_32964,Dementia,a lady a mother were in her kitchen,"*PAR:	a lady a mother were in her kitchen . [+ gram] 29778_32964
 ",a E lady E a _ mother _ were _ in _ her _ kitchen _,(S (EDITED (NP (UNK a) (UNK lady))) (NP (UNK a) (UNK mother)) (VP (UNK were) (PP (UNK in) (NP (UNK her) (UNK kitchen)))))
 879,S090,32964_38119,Dementia,in her kitchen doing some work i suppose,"*PAR:	in her kɪtʃə˞@u [: kitchen] [* p:n-ret] [//] kitchen doing some
@@ -1974,8 +1974,8 @@
 ",well _ let _ 's _ see _,(S (INTJ (UNK well)) (VP (UNK let) (S (NP (UNK 's)) (VP (UNK see)))))
 887,S090,80300_83100,Dementia,it looks like,"*PAR:	it looks like +... 80300_83100
 ",it _ looks _ like _,(S (NP (UNK it)) (VP (UNK looks) (PP (UNK like))))
-888,S090,83100_84573,Dementia,oh,"*PAR:	oh +... [+ exc] 83100_84573
-",oh _,(INTJ (UNK oh))
+888,S090,83100_84573,Dementia,oh exc,"*PAR:	oh +... [+ exc] 83100_84573
+",,
 889,S090,84573_88606,Dementia,,"*PAR:	<bʌmbʌdɪ@u [: x@n] [* n:uk] bʌmbʌdɪ@u [: x@n] [* n:uk]> [=! sings]
  	&=sings . [+ exc] 84573_88606
 ",,
@@ -1987,8 +1987,8 @@
 ",that E 's E that _ 's _ like _ the _ washing E would _ say _ washing _ machine _,(S (EDITED (S (NP (UNK that)) (VP (UNK 's)))) (NP (UNK that)) (VP (UNK 's) (PP (UNK like) (NP (UNK the) (EDITED (UNK washing)) (VP (UNK would) (VP (UNK say))) (UNK washing) (UNK machine)))))
 892,S090,99100_100392,Dementia,or let me see,"*PAR:	or let me see . [+ exc] 99100_100392
 ",or _ let _ me _ see _,(S (UNK or) (VP (UNK let) (S (NP (UNK me)) (VP (UNK see)))))
-893,S090,100392_101385,Dementia,i can't,"*PAR:	I can't +... [+ exc] 100392_101385
-",i _ ca _ n't _,(S (NP (UNK i)) (VP (UNK ca) (UNK n't)))
+893,S090,100392_101385,Dementia,i can't exc,"*PAR:	I can't +... [+ exc] 100392_101385
+",,
 894,S090,101385_103967,Dementia,oh that's the son come out of from school maybe or something,"*PAR:	oh ‡ that's the son come out_of [//] from school maybe or something
  	. [+ gram] 101385_103967
 ",oh _ that _ 's _ the _ son _ come _ out E of E from _ school _ maybe _ or _ something _,(S (INTJ (UNK oh)) (NP (UNK that)) (VP (UNK 's) (NP (UNK the) (UNK son)) (VP (VP (UNK come) (EDITED (PP (UNK out) (EDITED (PP (UNK of))))) (PP (UNK from) (NP (UNK school))) (ADVP (UNK maybe))) (UNK or) (NP (UNK something)))))
@@ -2019,8 +2019,8 @@
 905,S092,43456_50200,Dementia,she's reaching up to the boy and the boy is got his other hand down,"*PAR:	+< she's reachin(g) up to the boy and the boy is [//] got his other
  	hand down &=laughs . 43456_50200
 ",she _ 's _ reaching _ up _ to _ the _ boy _ and _ the _ boy _ is _ got _ his _ other _ hand _ down _,(S (S (NP (UNK she)) (VP (UNK 's) (VP (UNK reaching) (PP (UNK up) (PP (UNK to) (NP (UNK the) (UNK boy))))))) (UNK and) (S (NP (UNK the) (UNK boy)) (VP (UNK is) (VP (UNK got) (NP (UNK his) (UNK other) (UNK hand)) (ADVP (UNK down))))))
-906,S092,50222_50774,Dementia,so,"*PAR:	so +... [+ exc] 50222_50774
-",so _,(S (UNK so))
+906,S092,50222_50774,Dementia,so exc,"*PAR:	so +... [+ exc] 50222_50774
+",,
 907,S092,51000_51969,Dementia,it looks color,"*PAR:	+< it looks color +/. 51000_51969
 ",it _ looks _ color _,(S (NP (UNK it)) (VP (UNK looks) (NP (UNK color))))
 908,S092,51969_53216,Dementia,no that's all,"*PAR:	no that's all . [+ exc] 51969_53216
@@ -2100,9 +2100,9 @@
 939,S094,48996_55998,Dementia,and the guess drying dishes and water the faucet's on and water's running all over the floor,"*PAR:	and the [//] guess dryin(g) dishes and water [//] the faucet's on
  	and water's runnin(g) all over the floor . [+ gram] 48996_55998
 ",and _ the _ guess _ drying _ dishes _ and _ water _ the _ faucet _ 's _ on _ and _ water _ 's _ running _ all _ over _ the _ floor _,(FRAG (UNK and) (NP (UNK the) (INTJ (UNK guess)) (UNK drying) (UNK dishes)) (UNK and) (NP (UNK water)) (NP (NP (UNK the) (UNK faucet)) (VP (UNK 's) (ADVP (UNK on)))) (UNK and) (S (NP (UNK water)) (VP (UNK 's) (VP (UNK running) (PP (ADVP (UNK all)) (UNK over) (NP (UNK the) (UNK floor)))))))
-940,S094,56370_68403,Dementia,wh what else am i sup i mean what what,"*PAR:	(..) &wh <what else am I [/] &sup I_mean what> [//] what +..?
+940,S094,56370_68403,Dementia,wh what else am i sup i mean what what exc,"*PAR:	(..) &wh <what else am I [/] &sup I_mean what> [//] what +..?
  	[+ exc] 56370_68403
-",wh _ what _ else _ am _ i _ sup _ i _ mean _ what E what _,(SBARQ (INTJ (UNK wh)) (WHNP (WHNP (UNK what)) (ADVP (UNK else))) (SQ (UNK am) (NP (UNK i)) (VP (UNK sup))) (PRN (S (NP (UNK i)) (VP (UNK mean)))) (EDITED (WHNP (UNK what))) (WHNP (UNK what)))
+",,
 941,S094,73134_73700,Dementia,yeah,"*PAR:	yeah . [+ exc] 73134_73700
 ",yeah _,(INTJ (UNK yeah))
 942,S094,73700_74801,Dementia,the cookie jar,"*PAR:	the cookie jar . [+ gram] 73700_74801
@@ -2222,8 +2222,8 @@
 ",huh _,(INTJ (UNK huh))
 995,S100,57222_58000,Dementia,alright,"*PAR:	+< alright . [+ exc] 57222_58000
 ",alright _,(INTJ (UNK alright))
-996,S100,58722_66689,Dementia,oh uh,"*PAR:	oh (.) &uh +... [+ exc] 58722_66689
-",oh _ uh _,(INTJ (INTJ (UNK oh)) (INTJ (UNK uh)))
+996,S100,58722_66689,Dementia,oh uh exc,"*PAR:	oh (.) &uh +... [+ exc] 58722_66689
+",,
 997,S100,68058_73601,Dementia,uh oh he's gonna fall,"*PAR:	&uh oh he's gonna fall &=laughs . 68058_73601
 ",uh _ oh _ he _ 's _ gonna _ fall _,(S (INTJ (UNK uh)) (INTJ (UNK oh)) (NP (UNK he)) (VP (UNK 's) (VP (UNK gonna) (VP (UNK fall)))))
 998,S100,73601_80571,Dementia,and uh and she's laughing at them there,"*PAR:	and [/] &uh and she's laughin(g) at them there . 73601_80571
@@ -2255,8 +2255,8 @@
 ",cookies _ i _ mean _ um _ uh _ windows _ on _ the _ curtains _,(FRAG (NP (UNK cookies)) (PRN (S (NP (UNK i)) (VP (UNK mean)))) (INTJ (UNK um)) (INTJ (UNK uh)) (NP (NP (UNK windows)) (PP (UNK on) (NP (UNK the) (UNK curtains)))))
 1010,S101,166310_187088,Dementia,and um the spigot's on the sink,"*PAR:	and &um (...) the spigot's on the sink . 166310_187088
 ",and _ um _ the _ spigot _ 's _ on _ the _ sink _,(S (UNK and) (INTJ (UNK um)) (NP (UNK the) (UNK spigot)) (VP (UNK 's) (PP (UNK on) (NP (UNK the) (UNK sink)))))
-1011,S101,188429_220169,Dementia,and uh,"*PAR:	and &uh +... [+ exc] 188429_220169
-",and _ uh _,(S (UNK and) (INTJ (UNK uh)))
+1011,S101,188429_220169,Dementia,and uh exc,"*PAR:	and &uh +... [+ exc] 188429_220169
+",,
 1012,S101,221715_223521,Dementia,well that's about it,"*PAR:	well that's about it . [+ exc] 221715_223521
 ",well _ that _ 's _ about _ it _,(S (INTJ (UNK well)) (NP (UNK that)) (VP (UNK 's) (ADVP (UNK about)) (NP (UNK it))))
 1013,S103,6035_13351,Dementia,the boy's uh falling off the stool,"*PAR:	the boy's &uh fallin(g) off the stool . 6035_13351
@@ -2302,8 +2302,8 @@
 1030,S104,55045_62093,Dementia,um sh i think she must i think she's probably looking out the window as i take the second look,"*PAR:	&um &sh <I think she must> [//] I think she's probably lookin(g)
  	out the window as I take the second look . 55045_62093
 ",um _ sh _ i E think E she E must E i _ think _ she _ 's _ probably _ looking _ out _ the _ window _ as _ i _ take _ the _ second _ look _,(S (INTJ (UNK um)) (INTJ (UNK sh)) (EDITED (S (NP (UNK i)) (VP (UNK think) (SBAR (S (NP (UNK she)) (VP (UNK must))))))) (NP (UNK i)) (VP (UNK think) (SBAR (S (NP (UNK she)) (VP (UNK 's) (ADVP (UNK probably)) (VP (UNK looking) (PP (UNK out) (NP (UNK the) (UNK window))) (SBAR (UNK as) (S (NP (UNK i)) (VP (UNK take) (NP (UNK the) (UNK second) (UNK look)))))))))))
-1031,S104,62093_68593,Dementia,and i see apparently a couple dirty dishes on the table,"*PAR:	and I see apparently a couple dirty dishes on the table+top . 62093_68593
-",and _ i _ see _ apparently _ a _ couple _ dirty _ dishes _ on _ the _ table _,(S (UNK and) (NP (UNK i)) (VP (UNK see) (ADVP (UNK apparently)) (NP (UNK a) (UNK couple) (UNK dirty) (UNK dishes)) (PP (UNK on) (NP (UNK the) (UNK table)))))
+1031,S104,62093_68593,Dementia,and i see apparently a couple dirty dishes on the tabletop,"*PAR:	and I see apparently a couple dirty dishes on the table+top . 62093_68593
+",,
 1032,S104,68593_72782,Dementia,i see the cupboards,"*PAR:	I see the cupboards . 68593_72782
 ",i _ see _ the _ cupboards _,(S (NP (UNK i)) (VP (UNK see) (NP (UNK the) (UNK cupboards))))
 1033,S104,72782_76439,Dementia,uh i don't know whether they all have knobs on them or not,"*PAR:	&uh I don't know whether they all have knobs on them or not . 72782_76439
@@ -2377,8 +2377,8 @@
 ",or _ they _ do _ n't _ have _ it _ open _ or E or _ something _ might _ have _,(S (UNK or) (NP (UNK they)) (VP (VP (UNK do) (UNK n't) (VP (UNK have) (S (NP (UNK it)) (ADJP (UNK open))))) (EDITED (UNK or)) (UNK or) (NP (UNK something)) (VP (UNK might) (VP (UNK have)))))
 1066,S108,29007_29539,Dementia,i dunno,"*PAR:	I dunno [: don't know] . [+ exc] 29007_29539
 ",i _ dunno _,(S (NP (UNK i)) (VP (UNK dunno)))
-1067,S108,29539_30600,Dementia,what uh,"*PAR:	what &uh +..? [+ exc] 29539_30600
-",what _ uh _,(SBARQ (WHNP (UNK what)) (INTJ (UNK uh)))
+1067,S108,29539_30600,Dementia,what uh exc,"*PAR:	what &uh +..? [+ exc] 29539_30600
+",,
 1068,S108,30600_33244,Dementia,when the water goes down what what do you call that,"*PAR:	when the water goes down &=finger:tap what [/] what do you call
  	that ? [+ exc] 30600_33244
 ",when _ the _ water _ goes _ down _ what E what _ do _ you _ call _ that _,(SBARQ (SBAR (WHADVP (UNK when)) (S (NP (UNK the) (UNK water)) (VP (UNK goes) (PRT (UNK down))))) (EDITED (WHNP (UNK what))) (WHNP (UNK what)) (SQ (UNK do) (NP (UNK you)) (VP (UNK call) (S (NP (UNK that))))))
@@ -2456,8 +2456,8 @@
 ",,
 1104,S108,134190_137366,Dementia,i don't know,"*PAR:	I don't know &=laughs . [+ exc] 134190_137366
 ",i _ do _ n't _ know _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK know))))
-1105,S108,138013_139222,Dementia,i don't know what what what,"*PAR:	&=laughs I don't know what [x 3] +..? [+ exc] 138013_139222
-",i _ do _ n't _ know _ what E what _ what _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK know) (SBAR (EDITED (EDITED (WHNP (UNK what))) (WHNP (UNK what))) (WHNP (UNK what))))))
+1105,S108,138013_139222,Dementia,i don't know what what what exc,"*PAR:	&=laughs I don't know what [x 3] +..? [+ exc] 138013_139222
+",,
 1106,S108,140444_141023,Dementia,huh,"*PAR:	+< huh ? [+ exc] 140444_141023
 ",huh _,(INTJ (UNK huh))
 1107,S108,141239_143392,Dementia,cookie oh a cookie cookie,"*PAR:	+< cookie, oh a cookie [/] cookie . [+ exc] 141239_143392
@@ -2537,8 +2537,8 @@
 ",what _ more _ do _ you _ want _,(SBARQ (WHNP (UNK what) (UNK more)) (SQ (UNK do) (NP (UNK you)) (VP (UNK want))))
 1142,S110,44406_46447,Dementia,the wa the water rolling on the floor,"*PAR:	+< the [/] &wa the water rollin(g) on the floor . [+ gram] 44406_46447
 ",the E wa E the _ water _ rolling _ on _ the _ floor _,(NP (EDITED (NP (UNK the) (UNK wa))) (NP (UNK the) (UNK water)) (VP (UNK rolling) (PP (UNK on) (NP (UNK the) (UNK floor)))))
-1143,S111,9278_18086,Dementia,this is uh a clause copy copy by his,"*PAR:	this is &uh a clause copy [/] copy c@l by his +... [+ exc] 9278_18086
-",this _ is _ uh _ a _ clause _ copy _ copy _ by _ his _,(S (NP (UNK this)) (VP (UNK is) (INTJ (UNK uh)) (NP (NP (UNK a) (UNK clause) (UNK copy) (UNK copy)) (PP (UNK by) (NP (UNK his))))))
+1143,S111,9278_18086,Dementia,this is uh a clause copy copy by his exc,"*PAR:	this is &uh a clause copy [/] copy c@l by his +... [+ exc] 9278_18086
+",,
 1144,S111,20765_21800,Dementia,yeah uhhuh,"*PAR:	yeah uhhuh . [+ exc] 20765_21800
 ",yeah _ uhhuh _,(INTJ (INTJ (UNK yeah)) (INTJ (UNK uhhuh)))
 1145,S111,23470_26586,Dementia,a,"*PAR:	a mɪndə˞@u [: x@n] [* n:uk-ret] [//] mɪdə˞@u [: x@n] [* n:uk-ret]
@@ -2561,8 +2561,8 @@
 ",flexible _,(ADJP (UNK flexible))
 1153,S111,56593_59003,Dementia,,"*PAR:	xxx . [+ jar] 56593_59003
 ",,
-1154,S111,60435_68880,Dementia,my husband and uh,"*PAR:	my husband and &uh +... [+ exc] 60435_68880
-",my _ husband _ and _ uh _,(S (NP (NP (UNK my) (UNK husband)) (UNK and) (INTJ (UNK uh))))
+1154,S111,60435_68880,Dementia,my husband and uh exc,"*PAR:	my husband and &uh +... [+ exc] 60435_68880
+",,
 1155,S111,69000_70600,Dementia,is there somebody else there,"*PAR:	+< is there somebody else there ? [+ exc] 69000_70600
 ",is _ there _ somebody _ else _ there _,(SQ (UNK is) (NP (UNK there)) (NP (NP (UNK somebody)) (ADVP (UNK else))) (ADVP (UNK there)))
 1156,S111,72936_73955,Dementia,her too her,"*PAR:	<her too> [//] her . [+ gram] [+ exc] 72936_73955
@@ -2577,8 +2577,8 @@
 ",a E do _ guess _ getting _ older _ i E see E i _ so _,(S (EDITED (NP (UNK a))) (VP (UNK do) (VP (UNK guess) (SBAR (S (S (VP (UNK getting) (ADJP (UNK older)))) (EDITED (S (NP (UNK i)) (VP (UNK see)))) (NP (UNK i)) (ADVP (UNK so)))))))
 1161,S111,95170_96742,Dementia,oh no,"*PAR:	oh no . [+ exc] 95170_96742
 ",oh _ no _,(INTJ (INTJ (UNK oh)) (INTJ (UNK no)))
-1162,S111,96742_99952,Dementia,this is oh i can just,"*PAR:	this is [//] oh I can just +... [+ exc] 96742_99952
-",this E is E oh _ i _ can _ just _,(S (EDITED (S (NP (UNK this)) (VP (UNK is)))) (INTJ (UNK oh)) (NP (UNK i)) (VP (UNK can) (ADVP (UNK just))))
+1162,S111,96742_99952,Dementia,this is oh i can just exc,"*PAR:	this is [//] oh I can just +... [+ exc] 96742_99952
+",,
 1163,S111,99955_101500,Dementia,,"*PAR:	+< xxx . [+ jar] 99955_101500
  @End
 ",,
@@ -2892,9 +2892,9 @@
 ",oh _,(INTJ (UNK oh))
 1310,S130,35000_37392,Dementia,okay what do i hafta do now,"*PAR:	okay, what do I hafta do now ? [+ exc] 35000_37392
 ",okay _ what _ do _ i _ hafta _ do _ now _,(SBARQ (INTJ (UNK okay)) (WHNP (UNK what)) (SQ (UNK do) (NP (UNK i)) (NP (UNK hafta)) (VP (UNK do) (ADVP (UNK now)))))
-1311,S132,3192_14500,Dementia,well start from from the the uh t the uh th t the uh th t th the uh s uh,"*PAR:	well start from [/] from the [/] the [/] &uh &t the &uh &th &t the
+1311,S132,3192_14500,Dementia,well start from from the the uh t the uh th t the uh th t th the uh s uh exc,"*PAR:	well start from [/] from the [/] the [/] &uh &t the &uh &th &t the
  	[/] &uh &th &t &th the &uh &s &uh +... [+ exc] 3192_14500
-",well _ start _ from E from _ the E the _ uh _ t _ the _ uh _ th _ t _ the _ uh _ th _ t _ th _ the _ uh _ s _ uh _,(S (INTJ (UNK well)) (VP (UNK start) (EDITED (PP (UNK from))) (PP (UNK from) (EDITED (NP (UNK the))) (NP (NP (NP (UNK the) (INTJ (UNK uh)) (UNK t)) (NP (UNK the) (INTJ (UNK uh)) (UNK th) (UNK t))) (NP (NP (UNK the) (INTJ (UNK uh)) (UNK th) (UNK t) (UNK th)) (NP (UNK the) (INTJ (UNK uh)) (UNK s))))) (INTJ (UNK uh))))
+",,
 1312,S132,14500_15939,Dementia,how can i,"*PAR:	&=laughs how can I +/? [+ exc] 14500_15939
 ",how _ can _ i _,(SBARQ (WHADVP (UNK how)) (SQ (UNK can) (NP (UNK i))))
 1313,S132,16272_18085,Dementia,okay okay,"*PAR:	+< okay [/] okay . [+ exc] 16272_18085
@@ -2979,8 +2979,8 @@
 ",well _ what _ is _ this _ honey _,(SBARQ (INTJ (UNK well)) (WHNP (UNK what)) (SQ (UNK is) (NP (UNK this)) (NP (UNK honey))))
 1350,S137,31677_32591,Dementia,i i can't make that out,"*PAR:	I [/] I can't make that out . [+ exc] 31677_32591
 ",i E i _ ca _ n't _ make _ that _ out _,(S (EDITED (NP (UNK i))) (NP (UNK i)) (VP (UNK ca) (UNK n't) (VP (UNK make) (NP (UNK that)) (PRT (UNK out)))))
-1351,S137,32591_33778,Dementia,it look like a,"*PAR:	it look like a +... [+ exc] 32591_33778
-",it _ look _ like _ a _,(S (NP (UNK it)) (VP (UNK look) (PP (UNK like) (NP (UNK a)))))
+1351,S137,32591_33778,Dementia,it look like a exc,"*PAR:	it look like a +... [+ exc] 32591_33778
+",,
 1352,S137,35407_35972,Dementia,oh action,"*PAR:	oh action . [+ exc] 35407_35972
 ",oh _ action _,(FRAG (INTJ (UNK oh)) (NP (UNK action)))
 1353,S137,35972_36804,Dementia,oh i'm sorry,"*PAR:	oh ‡ I'm sorry . [+ exc] 35972_36804
@@ -3428,8 +3428,8 @@
 ",and _,(S (UNK and))
 1553,S165,9035_12555,,now it looks like she's,"*PAR:	+, now it looks like she's +... 9035_12555
 ",now _ it _ looks _ like _ she _ 's _,(S (ADVP (UNK now)) (NP (UNK it)) (VP (UNK looks) (SBAR (UNK like) (S (NP (UNK she)) (VP (UNK 's))))))
-1554,S165,12555_15783,,i me i c i can't really pick it out but,"*PAR:	I [/] &me I [/] &c I can't really pick it out but +... [+ exc] 12555_15783
-",i E me _ i _ c _ i _ ca _ n't _ really _ pick _ it _ out _ but _,(S (EDITED (NP (UNK i))) (NP (UNK me) (UNK i) (UNK c)) (NP (UNK i)) (VP (UNK ca) (UNK n't) (ADVP (UNK really)) (VP (UNK pick) (NP (UNK it)) (PRT (UNK out)) (UNK but))))
+1554,S165,12555_15783,,i me i c i can't really pick it out but exc,"*PAR:	I [/] &me I [/] &c I can't really pick it out but +... [+ exc] 12555_15783
+",,
 1555,S165,15783_21000,,oh and there's a girl here talking and a boy i assume on this side here,"*PAR:	oh and there's a gɪɾəl@u [: little] [* p:n] girl here talking and a
  	bɪɾəl@u [: little] boy I assume on this side here . 15783_21000
 ",oh _ and _ there _ 's _ a _ girl _ here _ talking _ and _ a _ boy _ i _ assume _ on _ this _ side _ here _,(S (INTJ (UNK oh)) (UNK and) (NP (UNK there)) (VP (UNK 's) (NP (UNK a) (UNK girl)) (ADVP (UNK here)) (VP (UNK talking)) (UNK and) (NP (UNK a) (UNK boy)) (PRN (S (NP (UNK i)) (VP (UNK assume)))) (PP (UNK on) (NP (UNK this) (UNK side))) (ADVP (UNK here))))
@@ -3540,8 +3540,8 @@
 1598,S166,122656_128770,,and two faucets with type handles one on either side and a center faucet,"*PAR:	and two faucets with x@l type handles one on either side and a
  	center faucet . [+ gram] 122656_128770
 ",and _ two _ faucets _ with _ type _ handles _ one _ on _ either _ side _ and _ a _ center _ faucet _,(FRAG (UNK and) (NP (NP (NP (UNK two) (UNK faucets)) (PP (UNK with) (NP (UNK type) (UNK handles)))) (NP (NP (UNK one)) (PP (UNK on) (NP (UNK either) (UNK side)))) (UNK and) (NP (UNK a) (UNK center) (UNK faucet))))
-1599,S166,128770_134016,,she has shoes on with no ties just sort of slip,"*PAR:	she has shoes on with no ties, just sort of slip+on shoes . 128770_134016
-",she _ has _ shoes _ on _ with _ no _ ties _ just _ sort _ of _ slip _,(S (NP (UNK she)) (VP (UNK has) (NP (UNK shoes)) (PRT (UNK on)) (PP (UNK with) (NP (UNK no) (UNK ties))) (ADVP (UNK just)) (ADVP (UNK sort) (UNK of)) (VP (UNK slip))))
+1599,S166,128770_134016,,she has shoes on with no ties just sort of slipon shoes,"*PAR:	she has shoes on with no ties, just sort of slip+on shoes . 128770_134016
+",,
 1600,S166,134016_140834,,there's a little scallop valance across the top of the curtains,"*PAR:	there's a little scallop valance across the top of the curtains . 134016_140834
 ",there _ 's _ a _ little _ scallop _ valance _ across _ the _ top _ of _ the _ curtains _,(S (NP (UNK there)) (VP (UNK 's) (NP (NP (UNK a) (UNK little) (UNK scallop) (UNK valance)) (PP (UNK across) (NP (NP (UNK the) (UNK top)) (PP (UNK of) (NP (UNK the) (UNK curtains))))))))
 1601,S166,140834_149371,,hm i think that's all i'm gonna tell you,"*PAR:	&hm (.) I think that's all I'm gonna tell you . [+ exc] 140834_149371
@@ -3595,8 +3595,8 @@
 ",the _ boy _ 's _ going _ to _ fall _ very _ hard _ and _ hurt _ himself _,(S (NP (UNK the) (UNK boy)) (VP (UNK 's) (VP (UNK going) (S (VP (UNK to) (VP (VP (UNK fall) (ADVP (UNK very) (UNK hard))) (UNK and) (VP (UNK hurt) (NP (UNK himself)))))))))
 1619,S167,185876_190327,,and nobody's gonna help him,"*PAR:	and nobody's gonna help him .185876_190327
 ",and _ nobody _ 's _ gonna _ help _ him _,(S (UNK and) (NP (UNK nobody)) (VP (UNK 's) (VP (UNK gonna) (VP (UNK help) (NP (UNK him))))))
-1620,S167,190327_193394,,well happening,"*PAR:	well happening +... [+ exc] 190327_193394
-",well _ happening _,(S (INTJ (UNK well)) (VP (UNK happening)))
+1620,S167,190327_193394,,well happening exc,"*PAR:	well happening +... [+ exc] 190327_193394
+",,
 1621,S167,193394_199962,,did i say the cabinet doors where the kids are have no handles on them,"*PAR:	did I say the cabinet doors where the kids are have no handles on
  	them ? [+ exc] 193394_199962
 ",did _ i _ say _ the _ cabinet _ doors _ where _ the _ kids _ are E have _ no _ handles _ on _ them _,(SQ (UNK did) (NP (UNK i)) (VP (UNK say) (NP (NP (UNK the) (UNK cabinet) (UNK doors)) (SBAR (WHADVP (UNK where)) (S (NP (UNK the) (UNK kids)) (EDITED (VP (UNK are))) (VP (UNK have) (NP (NP (UNK no) (UNK handles)) (PP (UNK on) (NP (UNK them))))))))))
@@ -3616,8 +3616,8 @@
 1628,S167,229071_234991,,the conflict's in whereas the what she's thinking whereas she didn't know the kids are behind her,"*PAR:	the conflict's in <whereas the> [//] what she's thinkin(g) whereas
  	she didn't know the kids are behind her . 229071_234991
 ",the _ conflict _ 's _ in _ whereas E the E what _ she _ 's _ thinking _ whereas _ she _ did _ n't _ know _ the _ kids _ are _ behind _ her _,(S (NP (UNK the) (UNK conflict)) (VP (UNK 's) (ADVP (UNK in)) (SBAR (SBAR (EDITED (SBAR (UNK whereas) (S (NP (UNK the))))) (WHNP (UNK what)) (S (NP (UNK she)) (VP (UNK 's) (VP (UNK thinking))))) (SBAR (UNK whereas) (S (NP (UNK she)) (VP (UNK did) (UNK n't) (VP (UNK know) (SBAR (S (NP (UNK the) (UNK kids)) (VP (UNK are) (PP (UNK behind) (NP (UNK her)))))))))))))
-1629,S167,234991_246500,,and did i say,"*PAR:	(.) and did I say +..? [+ exc] 234991_246500
-",and _ did _ i _ say _,(SQ (UNK and) (UNK did) (NP (UNK i)) (VP (UNK say)))
+1629,S167,234991_246500,,and did i say exc,"*PAR:	(.) and did I say +..? [+ exc] 234991_246500
+",,
 1630,S167,246500_250053,,,"*PAR:	xxx . [+ jar] [+ exc] 246500_250053
 ",,
 1631,S167,250053_253976,,the cabinet doors aren't the same are different sizes,"*PAR:	the cabinet doors <aren't the same> [//] are different sizes . 250053_253976
@@ -3673,8 +3673,8 @@
 ",but _ they _ seem _ happy _ in _ doing _ their _ own _ thing _,(S (UNK but) (NP (UNK they)) (VP (UNK seem) (ADJP (UNK happy) (PP (UNK in) (S (VP (UNK doing) (NP (UNK their) (UNK own) (UNK thing))))))))
 1653,S171,51982_66666,,i don't think i i lost that,"*PAR:	(..) <I don't think I> [//] I lost that . [+ exc] 51982_66666
 ",i _ do _ n't _ think _ i E i _ lost _ that _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK think) (SBAR (S (EDITED (NP (UNK i))) (NP (UNK i)) (VP (UNK lost) (NP (UNK that))))))))
-1654,S171,66666_67526,,i think i,"*PAR:	I think I +... [+ exc] 66666_67526
-",i _ think _ i _,(S (NP (UNK i)) (VP (UNK think) (SBAR (S (NP (UNK i))))))
+1654,S171,66666_67526,,i think i exc,"*PAR:	I think I +... [+ exc] 66666_67526
+",,
 1655,S172,9400_11750,,well the little girl is reaching for a cookie,"*PAR:	well the little girl is reaching for a cookie . 9400_11750
 ",well _ the _ little _ girl _ is _ reaching _ for _ a _ cookie _,(S (INTJ (UNK well)) (NP (UNK the) (UNK little) (UNK girl)) (VP (UNK is) (VP (UNK reaching) (PP (UNK for) (NP (UNK a) (UNK cookie))))))
 1656,S172,11750_18750,,and the boy is on a stool which is falling over to get in the cookie jar up on the second shelf of the cupboard with the door open,"*PAR:	and the boy is on a stool which is falling over to get in the
@@ -3780,10 +3780,10 @@
 ",uh _ the _ sink _ 's _ running _ over _,(S (INTJ (UNK uh)) (NP (UNK the) (UNK sink)) (VP (UNK 's) (VP (UNK running) (ADVP (UNK over)))))
 1696,S175,2522_6133,,the water's going all over the floor,"*PAR:	the water's goin(g) all over the floor . 2522_6133
 ",the _ water _ 's _ going _ all _ over _ the _ floor _,(S (NP (UNK the) (UNK water)) (VP (UNK 's) (VP (UNK going) (PP (UNK all) (UNK over) (NP (UNK the) (UNK floor))))))
-1697,S175,6133_14073,,here the boy the step,"*PAR:	here <the boy> [//] the step+ladder [: step+stool] [* s:r] is
+1697,S175,6133_14073,,here the boy the stepladder stepstool is turning under his legs and he's stealing cookies out of the cookie jar,"*PAR:	here <the boy> [//] the step+ladder [: step+stool] [* s:r] is
  	turnin(g) under his legs and he's stealin(g) cookies out_of the
  	cookie jar . 6133_14073
-",here _ the _ boy _ the _ step _,(S (ADVP (UNK here)) (NP (UNK the) (UNK boy)) (NP (UNK the) (UNK step)))
+",,
 1698,S175,14073_18724,,and she's begging for cookies the girl is,"*PAR:	and she's begging for cookies the girl is . 14073_18724
 ",and _ she _ 's _ begging _ for _ cookies _ the _ girl _ is _,(S (UNK and) (NP (UNK she)) (VP (UNK 's) (VP (UNK begging) (PP (PP (UNK for) (NP (UNK cookies))) (SBAR (S (NP (UNK the) (UNK girl)) (VP (UNK is))))))))
 1699,S175,18724_22233,,coming back to the sink let's see here,"*PAR:	coming back to the sink let's see here . [+ exc] 18724_22233
@@ -3832,8 +3832,8 @@
 1719,S176,6385_13878,,uh do i hafta use my my uh my personal uh description,"*PAR:	&uh do I hafta use my [/] my [/] &uh my personal &uh description ?
  	[+ exc] 6385_13878
 ",uh _ do _ i _ hafta _ use _ my E my _ uh _ my _ personal _ uh _ description _,(SQ (INTJ (UNK uh)) (UNK do) (NP (UNK i)) (NP (UNK hafta)) (VP (UNK use) (EDITED (EDITED (NP (UNK my))) (NP (UNK my))) (INTJ (UNK uh)) (NP (UNK my) (UNK personal) (INTJ (UNK uh)) (UNK description))))
-1720,S176,13878_15200,,or like uh,"*PAR:	or &=laughs like &uh +... [+ exc] 13878_15200
-",or _ like _ uh _,(S (UNK or) (INTJ (UNK like)) (INTJ (UNK uh)))
+1720,S176,13878_15200,,or like uh exc,"*PAR:	or &=laughs like &uh +... [+ exc] 13878_15200
+",,
 1721,S176,15200_20234,,the c cookie jar stealing the g uh cookie out of the cookie jar,"*PAR:	<the &c cookie jar> [//] stealing the &g &uh cookie out o(f) the
  	cookie jar . [+ gram] 15200_20234
 ",the _ c _ cookie _ jar _ stealing _ the _ g _ uh _ cookie _ out _ of _ the _ cookie _ jar _,(NP (NP (UNK the) (UNK c) (UNK cookie) (UNK jar)) (S (VP (UNK stealing) (NP (UNK the) (UNK g) (INTJ (UNK uh)) (UNK cookie)) (PP (UNK out) (PP (UNK of) (NP (UNK the) (UNK cookie) (UNK jar)))))))
@@ -3860,8 +3860,8 @@
 ",so _ that E would E be E the E that _ 's _ why _ it _ 's _ overflowing _ because _ the E s E sink E w E uh _ uh _ this _ water _ 's _ running _ out _ of _ the _ spigot _,(S (UNK so) (EDITED (S (NP (UNK that)) (VP (UNK would) (VP (UNK be) (NP (UNK the)))))) (NP (UNK that)) (VP (UNK 's) (SBAR (WHADVP (UNK why)) (S (NP (UNK it)) (VP (UNK 's) (VP (UNK overflowing))))) (SBAR (UNK because) (S (EDITED (NP (UNK the) (UNK s) (UNK sink) (UNK w))) (INTJ (UNK uh)) (INTJ (UNK uh)) (NP (UNK this) (UNK water)) (VP (UNK 's) (VP (UNK running) (PP (UNK out) (PP (UNK of) (NP (UNK the) (UNK spigot))))))))))
 1730,S176,68136_70260,,she's drying the dishes,"*PAR:	she's dryin(g) the dishes . 68136_70260
 ",she _ 's _ drying _ the _ dishes _,(S (NP (UNK she)) (VP (UNK 's) (VP (UNK drying) (NP (UNK the) (UNK dishes)))))
-1731,S176,70260_80000,,and let's see what else uh,"*PAR:	and let's see what else &uh +... [+ exc] 70260_80000
-",and _ let _ 's _ see _ what _ else _ uh _,(S (UNK and) (VP (UNK let) (S (NP (UNK 's)) (VP (UNK see) (NP (NP (UNK what)) (ADVP (UNK else))))) (INTJ (UNK uh))))
+1731,S176,70260_80000,,and let's see what else uh exc,"*PAR:	and let's see what else &uh +... [+ exc] 70260_80000
+",,
 1732,S176,81084_83544,,am i missing something,"*PAR:	am I missin(g) somethin(g) ? [+ exc] 81084_83544
 ",am _ i _ missing _ something _,(SQ (UNK am) (NP (UNK i)) (VP (UNK missing) (NP (UNK something))))
 1733,S176,83544_84710,,you know i'm pretty tired,"*PAR:	you_know I'm pretty tired . [+ exc] 83544_84710
@@ -3900,8 +3900,8 @@
 1748,S177,58583_65166,,and there's landscaping along the wall of the uh view from the yard view of the yard,"*PAR:	and there's landscaping along the wall of <the &uh view from the
  	yard> [//] view of the yard . 58583_65166
 ",and _ there _ 's _ landscaping _ along E the E wall E of E the E uh E view E from _ the _ yard _ view _ of _ the _ yard _,(S (UNK and) (NP (UNK there)) (VP (UNK 's) (NP (NP (UNK landscaping)) (PP (EDITED (PP (UNK along) (NP (NP (UNK the) (UNK wall)) (PP (UNK of) (NP (UNK the) (INTJ (UNK uh)) (UNK view)))))) (PP (UNK from) (NP (NP (UNK the) (UNK yard) (UNK view)) (PP (UNK of) (NP (UNK the) (UNK yard)))))))))
-1749,S177,65166_73941,,and the walk,"*PAR:	and the walk+way pictured from the window . [+ gram] 65166_73941
-",and _ the _ walk _,(FRAG (UNK and) (NP (UNK the) (UNK walk)))
+1749,S177,65166_73941,,and the walkway pictured from the window,"*PAR:	and the walk+way pictured from the window . [+ gram] 65166_73941
+",,
 1750,S177,73941_77881,,water is running overflowing,"*PAR:	water is running, overflowing . 73941_77881
 ",water _ is _ running _ overflowing _,(S (NP (UNK water)) (VP (UNK is) (VP (UNK running) (VP (UNK overflowing)))))
 1751,S177,77881_85911,,boy is holding a cookie in his left hand grabbing for another one with his right hand,"*PAR:	boy is holding a cookie in his left hand, grabbing for another one
@@ -4190,8 +4190,8 @@
 ",that _ 's _ it _,(S (NP (UNK that)) (VP (UNK 's) (NP (UNK it))))
 1879,S186,65417_66314,,that's all i see,"*PAR:	that's all I see . [+ exc] 65417_66314
 ",that _ 's _ all _ i _ see _,(S (NP (UNK that)) (VP (UNK 's) (NP (NP (UNK all)) (SBAR (S (NP (UNK i)) (VP (UNK see)))))))
-1880,S187,3832_12724,,hm,"*PAR:	hm +... [+ exc] 3832_12724
-",hm _,(INTJ (UNK hm))
+1880,S187,3832_12724,,hm exc,"*PAR:	hm +... [+ exc] 3832_12724
+",,
 1881,S187,12724_17727,,it's a little boy climbing up getting some coo cookies out of the cookie jar,"*PAR:	it's a little boy climbin(g) up gettin(g) some &coo cookies out
  	o(f) the cookie jar . 12724_17727
 ",it _ 's _ a _ little _ boy _ climbing _ up _ getting _ some _ coo _ cookies _ out _ of _ the _ cookie _ jar _,(S (NP (UNK it)) (VP (UNK 's) (S (NP (UNK a) (UNK little) (UNK boy)) (VP (VP (UNK climbing) (ADVP (UNK up))) (VP (UNK getting) (NP (UNK some) (UNK coo) (UNK cookies)) (PP (UNK out) (PP (UNK of) (NP (UNK the) (UNK cookie) (UNK jar)))))))))
@@ -4348,8 +4348,8 @@
 ",it E looks E n _ it _ looks _ nice _,(S (EDITED (S (NP (UNK it)) (VP (UNK looks)))) (NP (UNK n)) (NP (UNK it)) (VP (UNK looks) (ADJP (UNK nice))))
 1943,S192,112744_116014,,and then here when they had some stuff in through here,"*PAR:	and then here when they had some stuff in through here . [+ gram] 112744_116014
 ",and _ then _ here _ when _ they _ had _ some _ stuff _ in E through _ here _,(S (CONJP (UNK and) (UNK then)) (ADVP (UNK here)) (SBAR (WHADVP (UNK when)) (S (NP (UNK they)) (VP (UNK had) (NP (UNK some) (UNK stuff)) (EDITED (PP (UNK in))) (PP (UNK through) (ADVP (UNK here)))))))
-1944,S192,117120_118883,,and uh,"*PAR:	and &uh +... [+ exc] 117120_118883
-",and _ uh _,(S (UNK and) (INTJ (UNK uh)))
+1944,S192,117120_118883,,and uh exc,"*PAR:	and &uh +... [+ exc] 117120_118883
+",,
 1945,S192,120090_122241,,i like these things in through here too,"*PAR:	I like these things in through here too . [+ exc] 120090_122241
 ",i _ like _ these _ things _ in E through _ here _ too _,(S (NP (UNK i)) (VP (UNK like) (NP (UNK these) (UNK things)) (EDITED (PP (UNK in))) (PP (UNK through) (ADVP (UNK here))) (ADVP (UNK too))))
 1946,S192,125526_126486,,yeah,"*PAR:	+< yeah . [+ exc] 125526_126486
@@ -4479,8 +4479,8 @@
 ",the _ grass _ and _ stuff _ outside _,(FRAG (NP (UNK the) (UNK grass) (UNK and) (UNK stuff)) (ADVP (UNK outside)))
 2002,S198,32063_37085,,the woman has an apron on,"*PAR:	(..) the woman has an apron on . 32063_37085
 ",the _ woman _ has _ an _ apron _ on _,(S (NP (UNK the) (UNK woman)) (VP (UNK has) (NP (UNK an) (UNK apron)) (ADVP (UNK on))))
-2003,S198,37085_41838,,i don't know where everything,"*PAR:	I don't know where everything +... [+ exc] 37085_41838
-",i _ do _ n't _ know _ where _ everything _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK know) (SBAR (WHADVP (UNK where)) (S (NP (UNK everything)))))))
+2003,S198,37085_41838,,i don't know where everything exc,"*PAR:	I don't know where everything +... [+ exc] 37085_41838
+",,
 2004,S198,48600_50513,,i don't see anything else on that,"*PAR:	I don't see anything else on that . [+ exc] 48600_50513
 ",i _ do _ n't _ see _ anything _ else _ on _ that _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK see) (NP (NP (UNK anything)) (ADVP (UNK else))) (PP (UNK on) (NP (UNK that))))))
 2005,S199,2632_12438,,there's um the two children are in the process of stealing cookies from the cookie jar,"*PAR:	there's &um the two children are in the process o(f) stealing
@@ -4794,8 +4794,8 @@
 ",and _,(S (UNK and))
 2143,S165,9035_12555,,now it looks like she's,"*PAR:	+, now it looks like she's +... 9035_12555
 ",now _ it _ looks _ like _ she _ 's _,(S (ADVP (UNK now)) (NP (UNK it)) (VP (UNK looks) (SBAR (UNK like) (S (NP (UNK she)) (VP (UNK 's))))))
-2144,S165,12555_15783,,i me i c i can't really pick it out but,"*PAR:	I [/] &me I [/] &c I can't really pick it out but +... [+ exc] 12555_15783
-",i E me _ i _ c _ i _ ca _ n't _ really _ pick _ it _ out _ but _,(S (EDITED (NP (UNK i))) (NP (UNK me) (UNK i) (UNK c)) (NP (UNK i)) (VP (UNK ca) (UNK n't) (ADVP (UNK really)) (VP (UNK pick) (NP (UNK it)) (PRT (UNK out)) (UNK but))))
+2144,S165,12555_15783,,i me i c i can't really pick it out but exc,"*PAR:	I [/] &me I [/] &c I can't really pick it out but +... [+ exc] 12555_15783
+",,
 2145,S165,15783_21000,,oh and there's a girl here talking and a boy i assume on this side here,"*PAR:	oh and there's a gɪɾəl@u [: little] [* p:n] girl here talking and a
  	bɪɾəl@u [: little] boy I assume on this side here . 15783_21000
 ",oh _ and _ there _ 's _ a _ girl _ here _ talking _ and _ a _ boy _ i _ assume _ on _ this _ side _ here _,(S (INTJ (UNK oh)) (UNK and) (NP (UNK there)) (VP (UNK 's) (NP (UNK a) (UNK girl)) (ADVP (UNK here)) (VP (UNK talking)) (UNK and) (NP (UNK a) (UNK boy)) (PRN (S (NP (UNK i)) (VP (UNK assume)))) (PP (UNK on) (NP (UNK this) (UNK side))) (ADVP (UNK here))))
@@ -4906,8 +4906,8 @@
 2188,S166,122656_128770,,and two faucets with type handles one on either side and a center faucet,"*PAR:	and two faucets with x@l type handles one on either side and a
  	center faucet . [+ gram] 122656_128770
 ",and _ two _ faucets _ with _ type _ handles _ one _ on _ either _ side _ and _ a _ center _ faucet _,(FRAG (UNK and) (NP (NP (NP (UNK two) (UNK faucets)) (PP (UNK with) (NP (UNK type) (UNK handles)))) (NP (NP (UNK one)) (PP (UNK on) (NP (UNK either) (UNK side)))) (UNK and) (NP (UNK a) (UNK center) (UNK faucet))))
-2189,S166,128770_134016,,she has shoes on with no ties just sort of slip,"*PAR:	she has shoes on with no ties, just sort of slip+on shoes . 128770_134016
-",she _ has _ shoes _ on _ with _ no _ ties _ just _ sort _ of _ slip _,(S (NP (UNK she)) (VP (UNK has) (NP (UNK shoes)) (PRT (UNK on)) (PP (UNK with) (NP (UNK no) (UNK ties))) (ADVP (UNK just)) (ADVP (UNK sort) (UNK of)) (VP (UNK slip))))
+2189,S166,128770_134016,,she has shoes on with no ties just sort of slipon shoes,"*PAR:	she has shoes on with no ties, just sort of slip+on shoes . 128770_134016
+",,
 2190,S166,134016_140834,,there's a little scallop valance across the top of the curtains,"*PAR:	there's a little scallop valance across the top of the curtains . 134016_140834
 ",there _ 's _ a _ little _ scallop _ valance _ across _ the _ top _ of _ the _ curtains _,(S (NP (UNK there)) (VP (UNK 's) (NP (NP (UNK a) (UNK little) (UNK scallop) (UNK valance)) (PP (UNK across) (NP (NP (UNK the) (UNK top)) (PP (UNK of) (NP (UNK the) (UNK curtains))))))))
 2191,S166,140834_149371,,hm i think that's all i'm gonna tell you,"*PAR:	&hm (.) I think that's all I'm gonna tell you . [+ exc] 140834_149371
@@ -4961,8 +4961,8 @@
 ",the _ boy _ 's _ going _ to _ fall _ very _ hard _ and _ hurt _ himself _,(S (NP (UNK the) (UNK boy)) (VP (UNK 's) (VP (UNK going) (S (VP (UNK to) (VP (VP (UNK fall) (ADVP (UNK very) (UNK hard))) (UNK and) (VP (UNK hurt) (NP (UNK himself)))))))))
 2209,S167,185876_190327,,and nobody's gonna help him,"*PAR:	and nobody's gonna help him .185876_190327
 ",and _ nobody _ 's _ gonna _ help _ him _,(S (UNK and) (NP (UNK nobody)) (VP (UNK 's) (VP (UNK gonna) (VP (UNK help) (NP (UNK him))))))
-2210,S167,190327_193394,,well happening,"*PAR:	well happening +... [+ exc] 190327_193394
-",well _ happening _,(S (INTJ (UNK well)) (VP (UNK happening)))
+2210,S167,190327_193394,,well happening exc,"*PAR:	well happening +... [+ exc] 190327_193394
+",,
 2211,S167,193394_199962,,did i say the cabinet doors where the kids are have no handles on them,"*PAR:	did I say the cabinet doors where the kids are have no handles on
  	them ? [+ exc] 193394_199962
 ",did _ i _ say _ the _ cabinet _ doors _ where _ the _ kids _ are E have _ no _ handles _ on _ them _,(SQ (UNK did) (NP (UNK i)) (VP (UNK say) (NP (NP (UNK the) (UNK cabinet) (UNK doors)) (SBAR (WHADVP (UNK where)) (S (NP (UNK the) (UNK kids)) (EDITED (VP (UNK are))) (VP (UNK have) (NP (NP (UNK no) (UNK handles)) (PP (UNK on) (NP (UNK them))))))))))
@@ -4982,8 +4982,8 @@
 2218,S167,229071_234991,,the conflict's in whereas the what she's thinking whereas she didn't know the kids are behind her,"*PAR:	the conflict's in <whereas the> [//] what she's thinkin(g) whereas
  	she didn't know the kids are behind her . 229071_234991
 ",the _ conflict _ 's _ in _ whereas E the E what _ she _ 's _ thinking _ whereas _ she _ did _ n't _ know _ the _ kids _ are _ behind _ her _,(S (NP (UNK the) (UNK conflict)) (VP (UNK 's) (ADVP (UNK in)) (SBAR (SBAR (EDITED (SBAR (UNK whereas) (S (NP (UNK the))))) (WHNP (UNK what)) (S (NP (UNK she)) (VP (UNK 's) (VP (UNK thinking))))) (SBAR (UNK whereas) (S (NP (UNK she)) (VP (UNK did) (UNK n't) (VP (UNK know) (SBAR (S (NP (UNK the) (UNK kids)) (VP (UNK are) (PP (UNK behind) (NP (UNK her)))))))))))))
-2219,S167,234991_246500,,and did i say,"*PAR:	(.) and did I say +..? [+ exc] 234991_246500
-",and _ did _ i _ say _,(SQ (UNK and) (UNK did) (NP (UNK i)) (VP (UNK say)))
+2219,S167,234991_246500,,and did i say exc,"*PAR:	(.) and did I say +..? [+ exc] 234991_246500
+",,
 2220,S167,246500_250053,,,"*PAR:	xxx . [+ jar] [+ exc] 246500_250053
 ",,
 2221,S167,250053_253976,,the cabinet doors aren't the same are different sizes,"*PAR:	the cabinet doors <aren't the same> [//] are different sizes . 250053_253976
@@ -5039,8 +5039,8 @@
 ",but _ they _ seem _ happy _ in _ doing _ their _ own _ thing _,(S (UNK but) (NP (UNK they)) (VP (UNK seem) (ADJP (UNK happy) (PP (UNK in) (S (VP (UNK doing) (NP (UNK their) (UNK own) (UNK thing))))))))
 2243,S171,51982_66666,,i don't think i i lost that,"*PAR:	(..) <I don't think I> [//] I lost that . [+ exc] 51982_66666
 ",i _ do _ n't _ think _ i E i _ lost _ that _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK think) (SBAR (S (EDITED (NP (UNK i))) (NP (UNK i)) (VP (UNK lost) (NP (UNK that))))))))
-2244,S171,66666_67526,,i think i,"*PAR:	I think I +... [+ exc] 66666_67526
-",i _ think _ i _,(S (NP (UNK i)) (VP (UNK think) (SBAR (S (NP (UNK i))))))
+2244,S171,66666_67526,,i think i exc,"*PAR:	I think I +... [+ exc] 66666_67526
+",,
 2245,S172,9400_11750,,well the little girl is reaching for a cookie,"*PAR:	well the little girl is reaching for a cookie . 9400_11750
 ",well _ the _ little _ girl _ is _ reaching _ for _ a _ cookie _,(S (INTJ (UNK well)) (NP (UNK the) (UNK little) (UNK girl)) (VP (UNK is) (VP (UNK reaching) (PP (UNK for) (NP (UNK a) (UNK cookie))))))
 2246,S172,11750_18750,,and the boy is on a stool which is falling over to get in the cookie jar up on the second shelf of the cupboard with the door open,"*PAR:	and the boy is on a stool which is falling over to get in the
@@ -5146,10 +5146,10 @@
 ",uh _ the _ sink _ 's _ running _ over _,(S (INTJ (UNK uh)) (NP (UNK the) (UNK sink)) (VP (UNK 's) (VP (UNK running) (ADVP (UNK over)))))
 2286,S175,2522_6133,,the water's going all over the floor,"*PAR:	the water's goin(g) all over the floor . 2522_6133
 ",the _ water _ 's _ going _ all _ over _ the _ floor _,(S (NP (UNK the) (UNK water)) (VP (UNK 's) (VP (UNK going) (PP (UNK all) (UNK over) (NP (UNK the) (UNK floor))))))
-2287,S175,6133_14073,,here the boy the step,"*PAR:	here <the boy> [//] the step+ladder [: step+stool] [* s:r] is
+2287,S175,6133_14073,,here the boy the stepladder stepstool is turning under his legs and he's stealing cookies out of the cookie jar,"*PAR:	here <the boy> [//] the step+ladder [: step+stool] [* s:r] is
  	turnin(g) under his legs and he's stealin(g) cookies out_of the
  	cookie jar . 6133_14073
-",here _ the _ boy _ the _ step _,(S (ADVP (UNK here)) (NP (UNK the) (UNK boy)) (NP (UNK the) (UNK step)))
+",,
 2288,S175,14073_18724,,and she's begging for cookies the girl is,"*PAR:	and she's begging for cookies the girl is . 14073_18724
 ",and _ she _ 's _ begging _ for _ cookies _ the _ girl _ is _,(S (UNK and) (NP (UNK she)) (VP (UNK 's) (VP (UNK begging) (PP (PP (UNK for) (NP (UNK cookies))) (SBAR (S (NP (UNK the) (UNK girl)) (VP (UNK is))))))))
 2289,S175,18724_22233,,coming back to the sink let's see here,"*PAR:	coming back to the sink let's see here . [+ exc] 18724_22233
@@ -5198,8 +5198,8 @@
 2309,S176,6385_13878,,uh do i hafta use my my uh my personal uh description,"*PAR:	&uh do I hafta use my [/] my [/] &uh my personal &uh description ?
  	[+ exc] 6385_13878
 ",uh _ do _ i _ hafta _ use _ my E my _ uh _ my _ personal _ uh _ description _,(SQ (INTJ (UNK uh)) (UNK do) (NP (UNK i)) (NP (UNK hafta)) (VP (UNK use) (EDITED (EDITED (NP (UNK my))) (NP (UNK my))) (INTJ (UNK uh)) (NP (UNK my) (UNK personal) (INTJ (UNK uh)) (UNK description))))
-2310,S176,13878_15200,,or like uh,"*PAR:	or &=laughs like &uh +... [+ exc] 13878_15200
-",or _ like _ uh _,(S (UNK or) (INTJ (UNK like)) (INTJ (UNK uh)))
+2310,S176,13878_15200,,or like uh exc,"*PAR:	or &=laughs like &uh +... [+ exc] 13878_15200
+",,
 2311,S176,15200_20234,,the c cookie jar stealing the g uh cookie out of the cookie jar,"*PAR:	<the &c cookie jar> [//] stealing the &g &uh cookie out o(f) the
  	cookie jar . [+ gram] 15200_20234
 ",the _ c _ cookie _ jar _ stealing _ the _ g _ uh _ cookie _ out _ of _ the _ cookie _ jar _,(NP (NP (UNK the) (UNK c) (UNK cookie) (UNK jar)) (S (VP (UNK stealing) (NP (UNK the) (UNK g) (INTJ (UNK uh)) (UNK cookie)) (PP (UNK out) (PP (UNK of) (NP (UNK the) (UNK cookie) (UNK jar)))))))
@@ -5226,8 +5226,8 @@
 ",so _ that E would E be E the E that _ 's _ why _ it _ 's _ overflowing _ because _ the E s E sink E w E uh _ uh _ this _ water _ 's _ running _ out _ of _ the _ spigot _,(S (UNK so) (EDITED (S (NP (UNK that)) (VP (UNK would) (VP (UNK be) (NP (UNK the)))))) (NP (UNK that)) (VP (UNK 's) (SBAR (WHADVP (UNK why)) (S (NP (UNK it)) (VP (UNK 's) (VP (UNK overflowing))))) (SBAR (UNK because) (S (EDITED (NP (UNK the) (UNK s) (UNK sink) (UNK w))) (INTJ (UNK uh)) (INTJ (UNK uh)) (NP (UNK this) (UNK water)) (VP (UNK 's) (VP (UNK running) (PP (UNK out) (PP (UNK of) (NP (UNK the) (UNK spigot))))))))))
 2320,S176,68136_70260,,she's drying the dishes,"*PAR:	she's dryin(g) the dishes . 68136_70260
 ",she _ 's _ drying _ the _ dishes _,(S (NP (UNK she)) (VP (UNK 's) (VP (UNK drying) (NP (UNK the) (UNK dishes)))))
-2321,S176,70260_80000,,and let's see what else uh,"*PAR:	and let's see what else &uh +... [+ exc] 70260_80000
-",and _ let _ 's _ see _ what _ else _ uh _,(S (UNK and) (VP (UNK let) (S (NP (UNK 's)) (VP (UNK see) (NP (NP (UNK what)) (ADVP (UNK else))))) (INTJ (UNK uh))))
+2321,S176,70260_80000,,and let's see what else uh exc,"*PAR:	and let's see what else &uh +... [+ exc] 70260_80000
+",,
 2322,S176,81084_83544,,am i missing something,"*PAR:	am I missin(g) somethin(g) ? [+ exc] 81084_83544
 ",am _ i _ missing _ something _,(SQ (UNK am) (NP (UNK i)) (VP (UNK missing) (NP (UNK something))))
 2323,S176,83544_84710,,you know i'm pretty tired,"*PAR:	you_know I'm pretty tired . [+ exc] 83544_84710
@@ -5266,8 +5266,8 @@
 2338,S177,58583_65166,,and there's landscaping along the wall of the uh view from the yard view of the yard,"*PAR:	and there's landscaping along the wall of <the &uh view from the
  	yard> [//] view of the yard . 58583_65166
 ",and _ there _ 's _ landscaping _ along E the E wall E of E the E uh E view E from _ the _ yard _ view _ of _ the _ yard _,(S (UNK and) (NP (UNK there)) (VP (UNK 's) (NP (NP (UNK landscaping)) (PP (EDITED (PP (UNK along) (NP (NP (UNK the) (UNK wall)) (PP (UNK of) (NP (UNK the) (INTJ (UNK uh)) (UNK view)))))) (PP (UNK from) (NP (NP (UNK the) (UNK yard) (UNK view)) (PP (UNK of) (NP (UNK the) (UNK yard)))))))))
-2339,S177,65166_73941,,and the walk,"*PAR:	and the walk+way pictured from the window . [+ gram] 65166_73941
-",and _ the _ walk _,(FRAG (UNK and) (NP (UNK the) (UNK walk)))
+2339,S177,65166_73941,,and the walkway pictured from the window,"*PAR:	and the walk+way pictured from the window . [+ gram] 65166_73941
+",,
 2340,S177,73941_77881,,water is running overflowing,"*PAR:	water is running, overflowing . 73941_77881
 ",water _ is _ running _ overflowing _,(S (NP (UNK water)) (VP (UNK is) (VP (UNK running) (VP (UNK overflowing)))))
 2341,S177,77881_85911,,boy is holding a cookie in his left hand grabbing for another one with his right hand,"*PAR:	boy is holding a cookie in his left hand, grabbing for another one
@@ -5556,8 +5556,8 @@
 ",that _ 's _ it _,(S (NP (UNK that)) (VP (UNK 's) (NP (UNK it))))
 2469,S186,65417_66314,,that's all i see,"*PAR:	that's all I see . [+ exc] 65417_66314
 ",that _ 's _ all _ i _ see _,(S (NP (UNK that)) (VP (UNK 's) (NP (NP (UNK all)) (SBAR (S (NP (UNK i)) (VP (UNK see)))))))
-2470,S187,3832_12724,,hm,"*PAR:	hm +... [+ exc] 3832_12724
-",hm _,(INTJ (UNK hm))
+2470,S187,3832_12724,,hm exc,"*PAR:	hm +... [+ exc] 3832_12724
+",,
 2471,S187,12724_17727,,it's a little boy climbing up getting some coo cookies out of the cookie jar,"*PAR:	it's a little boy climbin(g) up gettin(g) some &coo cookies out
  	o(f) the cookie jar . 12724_17727
 ",it _ 's _ a _ little _ boy _ climbing _ up _ getting _ some _ coo _ cookies _ out _ of _ the _ cookie _ jar _,(S (NP (UNK it)) (VP (UNK 's) (S (NP (UNK a) (UNK little) (UNK boy)) (VP (VP (UNK climbing) (ADVP (UNK up))) (VP (UNK getting) (NP (UNK some) (UNK coo) (UNK cookies)) (PP (UNK out) (PP (UNK of) (NP (UNK the) (UNK cookie) (UNK jar)))))))))
@@ -5714,8 +5714,8 @@
 ",it E looks E n _ it _ looks _ nice _,(S (EDITED (S (NP (UNK it)) (VP (UNK looks)))) (NP (UNK n)) (NP (UNK it)) (VP (UNK looks) (ADJP (UNK nice))))
 2533,S192,112744_116014,,and then here when they had some stuff in through here,"*PAR:	and then here when they had some stuff in through here . [+ gram] 112744_116014
 ",and _ then _ here _ when _ they _ had _ some _ stuff _ in E through _ here _,(S (CONJP (UNK and) (UNK then)) (ADVP (UNK here)) (SBAR (WHADVP (UNK when)) (S (NP (UNK they)) (VP (UNK had) (NP (UNK some) (UNK stuff)) (EDITED (PP (UNK in))) (PP (UNK through) (ADVP (UNK here)))))))
-2534,S192,117120_118883,,and uh,"*PAR:	and &uh +... [+ exc] 117120_118883
-",and _ uh _,(S (UNK and) (INTJ (UNK uh)))
+2534,S192,117120_118883,,and uh exc,"*PAR:	and &uh +... [+ exc] 117120_118883
+",,
 2535,S192,120090_122241,,i like these things in through here too,"*PAR:	I like these things in through here too . [+ exc] 120090_122241
 ",i _ like _ these _ things _ in E through _ here _ too _,(S (NP (UNK i)) (VP (UNK like) (NP (UNK these) (UNK things)) (EDITED (PP (UNK in))) (PP (UNK through) (ADVP (UNK here))) (ADVP (UNK too))))
 2536,S192,125526_126486,,yeah,"*PAR:	+< yeah . [+ exc] 125526_126486
@@ -5845,8 +5845,8 @@
 ",the _ grass _ and _ stuff _ outside _,(FRAG (NP (UNK the) (UNK grass) (UNK and) (UNK stuff)) (ADVP (UNK outside)))
 2592,S198,32063_37085,,the woman has an apron on,"*PAR:	(..) the woman has an apron on . 32063_37085
 ",the _ woman _ has _ an _ apron _ on _,(S (NP (UNK the) (UNK woman)) (VP (UNK has) (NP (UNK an) (UNK apron)) (ADVP (UNK on))))
-2593,S198,37085_41838,,i don't know where everything,"*PAR:	I don't know where everything +... [+ exc] 37085_41838
-",i _ do _ n't _ know _ where _ everything _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK know) (SBAR (WHADVP (UNK where)) (S (NP (UNK everything)))))))
+2593,S198,37085_41838,,i don't know where everything exc,"*PAR:	I don't know where everything +... [+ exc] 37085_41838
+",,
 2594,S198,48600_50513,,i don't see anything else on that,"*PAR:	I don't see anything else on that . [+ exc] 48600_50513
 ",i _ do _ n't _ see _ anything _ else _ on _ that _,(S (NP (UNK i)) (VP (UNK do) (UNK n't) (VP (UNK see) (NP (NP (UNK anything)) (ADVP (UNK else))) (PP (UNK on) (NP (UNK that))))))
 2595,S199,2632_12438,,there's um the two children are in the process of stealing cookies from the cookie jar,"*PAR:	there's &um the two children are in the process o(f) stealing

@@ -93,7 +93,7 @@ def remove_tags(text):
 # data['transcript_without_tags'] = data.transcript_without_tags.apply(lambda x: clean_text(x))
 def get_words(text):
     if text is None:
-        return
+        return ""
     tokens = text.split()
     twords = tokens[::2]
     transcript = " ".join(twords)
@@ -105,7 +105,7 @@ data['transcript_without_tags'] = data.disfluency_text.apply(lambda x: get_words
 
 def remove_underscore(text):
     if text is None:
-        return
+        return ""
     text = re.sub(r"\_", "F", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
@@ -128,12 +128,11 @@ def remove_repetition(pred, alignment, all_errors):
         if pred is not None:
             pred = pred.split()
             transcript = " ".join([w for w in pred[::2]])
-            transcript = ""
             return transcript
         else:
-            return None
+            return ""
     if pred is None or not pred:
-        return None
+        return ""
     pred = pred.split()
     pred_tags = pred[1::2]
     pred_words = pred[::2]
@@ -205,12 +204,11 @@ def remove_retracing(pred, alignment, all_errors):
         if pred is not None:
             pred = pred.split()
             transcript = " ".join([w for w in pred[::2]])
-            transcript = ""
             return transcript
         else:
-            return None
+            return ""
     if pred is None or not pred:
-        return None
+        return ""
     pred = pred.split()
     pred_tags = pred[1::2]
     pred_words = pred[::2]
@@ -285,7 +283,7 @@ def remove_duplicates(text):
 
 def remove_disfluency(text):
     if text is None:
-        return
+        return ""
     text = text.split()
     text_tags = text[1::2]
     text_words = text[::2]
@@ -341,16 +339,11 @@ for (idx, (speaker,
         _transcript_without_underscore = data_final[speaker][3]
         _transcript_without_repetition = data_final[speaker][4]
         _transcript_without_retracing = data_final[speaker][5]
-        if transcript_without_tags is not None:
-            _transcript_without_tags += " " + transcript_without_tags
-        if transcript_without_disfluency is not None:
-            _transcript_without_disfluency += " " + transcript_without_disfluency
-        if transcript_without_underscore is not None:
-            _transcript_without_underscore += " " + transcript_without_underscore
-        if transcript_without_repetition is not None:
-            _transcript_without_repetition += " " + transcript_without_repetition
-        if transcript_without_retracing is not None:
-            _transcript_without_retracing += " " + transcript_without_retracing
+        _transcript_without_tags += " " + transcript_without_tags
+        _transcript_without_disfluency += " " + transcript_without_disfluency
+        _transcript_without_underscore += " " + transcript_without_underscore
+        _transcript_without_repetition += " " + transcript_without_repetition
+        _transcript_without_retracing += " " + transcript_without_retracing
         data_final[speaker] = (speaker,
                                _transcript_without_tags,
                                _transcript_without_disfluency,

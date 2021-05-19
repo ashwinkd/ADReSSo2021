@@ -182,7 +182,7 @@ for phase in ["train", "test"]:
                                              ] + errors))
                     df = df.append(row, ignore_index=True)
                 idx += 1
-df.to_csv('transcripts.csv')
+df.to_pickle('transcripts.pickle')
 print(classwise_error)
 for cat, error_dict in classwise_error.items():
     utt_count = classwise_utterances[cat]
